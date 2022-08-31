@@ -3,5 +3,5 @@ Wealthify merupakan aplikasi mangemen keuangan yang memiliki fitur seperti data 
 
 DEVELOPER MAGANG <br>
 Ketua Kelompok : <br>
-Anggota 1 : <br>
+Anggota 1 : Adya Sena Pamungkas - 20/460536/TK/51125 <br>
 Anggota 2 : <br>
