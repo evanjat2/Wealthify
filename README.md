@@ -1,5 +1,5 @@
 # Wealthify
-Wealthify merupakan aplikasi mangemen keuangan yang memiliki fitur seperti data pemasukan, pengeluaran, target tabungan, _financial news_, dan laporan keuangan.
+Wealthify merupakan aplikasi manajemen keuangan yang memiliki fitur seperti data pemasukan, pengeluaran, target tabungan, _financial news_, dan laporan keuangan.
 
 DEVELOPER MAGANG <br>
 Ketua Kelompok : Evan Ananda Jati - 20/460543/TK/51132 <br>
