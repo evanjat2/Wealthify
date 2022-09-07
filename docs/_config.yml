@@ -1,5 +1,0 @@
-remote_theme: pages-themes/architect@v0.2.0
-plugins:
-- jekyll-remote-theme
-title: Wealthify
-description: Aplikasi manajemen keuangan yang memiliki fitur seperti data pemasukan, pengeluaran, target tabungan, financial news , dan laporan keuangan.
