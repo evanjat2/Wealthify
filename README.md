@@ -10,7 +10,7 @@
 <details>
   <summary><h3>Class Diagram</h3></summary>
 
-![Class Diagram](/Wealthify/docs/assets/classdiagram.png)
+![Class Diagram](/Wealthify/docs/assets/img/classdiagram.png)
 
 </details>
 
