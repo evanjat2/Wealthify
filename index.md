@@ -10,4 +10,4 @@
 <details>
   <summary><h3>Class Diagram</h3></summary>
 
-<img src="docs/assets/img/classdiagram.png" class="img-responsive" alt=""> </div>
+<img src="docs/assets/img/classdiagram.png" class="img-responsive" alt="">
