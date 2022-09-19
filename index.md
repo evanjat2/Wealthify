@@ -7,7 +7,5 @@
 <p>Anggota 1 : Adya Sena Pamungkas - 20/460536/TK/51125 as Software Architect</p>
 <p>Anggota 2 : Laili Rofi'ah - 20/463604/TK/51596 as Front-end Developer </p>
 
-<details>
-  <summary><h3>Class Diagram</h3></summary>
-
+<summary><h3>Class Diagram</h3></summary>
 <img src="docs/assets/img/classdiagram.png" class="img-responsive" alt="">
