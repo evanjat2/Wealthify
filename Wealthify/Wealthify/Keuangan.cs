@@ -8,22 +8,26 @@ namespace Wealthify
 {
     internal class Keuangan
     {
-      public string jenisKeuangan;
+        private string _jenisKeuangan;
+        private string _kategoriKeuangan;
+        private float _saldo;
+        private float _targetTabungan;
+      public string jenisKeuangan
       {
         get { return _jenisKeuangan; }
         set { _jenisKeuangan = value; }
       }
-      public string kategoriKeuangan;
+      public string kategoriKeuangan
       {
         get { return _kategoriKeuangan; }
         set { _kategoriKeuangan = value; }
       }
-      public float saldo;
+      public float saldo
       {
         get { return _saldo; }
         set { _saldo = value; }
       }
-      public float targetTabungan;
+      public float targetTabungan
       {
       get { return _targetTabungan; }
       set { _targetTabungan = value; }
