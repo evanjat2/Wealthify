@@ -7,14 +7,15 @@
 <p>Anggota 1 : Adya Sena Pamungkas - 20/460536/TK/51125 as Software Architect</p>
 <p>Anggota 2 : Laili Rofi'ah - 20/463604/TK/51596 as Front-end Developer </p>
 
-<details><summary><h3>Diagram<h3><summary>
-<summary><h3>Class Diagram</h3></summary>
+<details>
+  <summary><h3>Diagram<h3><summary>
+<h3>Class Diagram</h3>
 <img src="docs/assets/img/classdiagram.png" class="img-responsive" alt="">
 
-<summary><h3>Use Case</h3></summary>
+<h3>Use Case</h3>
 <img src="docs/assets/img/usecase.png" class="img-responsive" alt="">
 
-<summary><h3>Activity Diagram</h3></summary>
+<h3>Activity Diagram</h3>
 <img src="docs/assets/img/activity1.png" class="img-responsive" alt="">
 <img src="docs/assets/img/activity2.png" class="img-responsive" alt="">
 </details>
