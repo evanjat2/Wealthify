@@ -8,29 +8,44 @@ namespace Wealthify
 {
     internal class Keuangan
     {
-        private string _jenisKeuangan;
-        private string _kategoriKeuangan;
-        private float _saldo;
-        private float _targetTabungan;
-      public string jenisKeuangan
-      {
-        get { return _jenisKeuangan; }
-        set { _jenisKeuangan = value; }
-      }
-      public string kategoriKeuangan
-      {
-        get { return _kategoriKeuangan; }
-        set { _kategoriKeuangan = value; }
-      }
-      public float saldo
-      {
-        get { return _saldo; }
-        set { _saldo = value; }
-      }
-      public float targetTabungan
-      {
-      get { return _targetTabungan; }
-      set { _targetTabungan = value; }
-      }
-   }
+        private int nomorTransaksi;
+        private string jenisTransaksi;
+        private string kategoriTransaksi;
+        private string namaKantong;
+        private string catatan;
+        private float nominal;
+
+        public int NomorTransaksi
+        {
+            get { return nomorTransaksi; }
+        }
+
+        public string JenisTransaksi
+        {
+            get { return jenisTransaksi; }
+            set { jenisTransaksi = value; }
+        }
+        public string KategoriTransaksi
+        {
+            get { return KategoriTransaksi; }
+            set { KategoriTransaksi = value; }
+        }
+
+        public float Nominal
+        {
+            get { return nominal; }
+            set { nominal = value; }
+        }
+
+        public string Catatan
+        {
+            get { return catatan; }
+            set { catatan = value; }
+        }
+
+        public void LaporanTransaksi(string jenisTransaksi, string kategoriTransaksi, string namaKantong, float nominal, string catatan)
+        {
+            return;
+        }
+    }
 }
