@@ -16,3 +16,6 @@
 <summary><h3>Activity Diagram</h3></summary>
 <img src="docs/assets/img/activity1.png" class="img-responsive" alt="">
 <img src="docs/assets/img/activity2.png" class="img-responsive" alt="">
+
+<summary><h3>Entity Relation Diagram</h3></summary>
+<img src="docs/assets/img/erd.png" class="img-responsive" alt="">
