@@ -9,3 +9,10 @@
 
 <summary><h3>Class Diagram</h3></summary>
 <img src="docs/assets/img/classdiagram.png" class="img-responsive" alt="">
+
+<summary><h3>Use Case</h3></summary>
+<img src="docs/assets/img/usecase.png" class="img-responsive" alt="">
+
+<summary><h3>Activity Diagram</h3></summary>
+<img src="docs/assets/img/activity1.png" class="img-responsive" alt="">
+<img src="docs/assets/img/activity2.png" class="img-responsive" alt="">

@@ -13,7 +13,7 @@ namespace Wealthify
         private string password;
         private string name;
         private int phoneNumber;
-        private int money;
+        private float money;
 
         public int UserID { get; }
 
@@ -27,16 +27,16 @@ namespace Wealthify
 
         public int PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
 
-        public int Money { get => money; set => money = value; }
+        public float Money { get => money; set => money = value; }
 
-        public void Login ( string username, string password )
+        public Boolean Login ( string username, string password )
         {
-            // Masih belum tau hehe
+            return false;
         }
 
-        public void SignUp(string username, string password, string name)
+        public Boolean SignUp(string username, string password, string name)
         {
-            // Masih belum tau hehe
+            return false;
         }
     }
 }
