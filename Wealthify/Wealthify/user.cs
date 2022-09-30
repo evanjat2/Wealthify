@@ -17,7 +17,7 @@ namespace Wealthify
 
         public int UserID { get; }
 
-        public string UserName { get => username }
+        public string UserName { get => username; }
 
         public string Email { get => email; set => email = value; }
 
