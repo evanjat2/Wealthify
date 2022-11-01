@@ -47,9 +47,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Wealthify.Properties.Resources.cover_login;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(81, 155);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 93);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(506, 373);
+            this.pictureBox1.Size = new System.Drawing.Size(623, 507);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -58,20 +59,22 @@
             // 
             this.tbEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.tbEmail.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbEmail.Location = new System.Drawing.Point(646, 223);
+            this.tbEmail.Location = new System.Drawing.Point(806, 275);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.PlaceholderText = "Masukkan email";
-            this.tbEmail.Size = new System.Drawing.Size(531, 41);
+            this.tbEmail.Size = new System.Drawing.Size(373, 30);
             this.tbEmail.TabIndex = 2;
             // 
             // tbPassword
             // 
             this.tbPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.tbPassword.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPassword.Location = new System.Drawing.Point(646, 298);
+            this.tbPassword.Location = new System.Drawing.Point(806, 320);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PlaceholderText = "Masukkan Password";
-            this.tbPassword.Size = new System.Drawing.Size(531, 41);
+            this.tbPassword.Size = new System.Drawing.Size(373, 30);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
@@ -82,9 +85,10 @@
             this.linkForgot.AutoSize = true;
             this.linkForgot.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkForgot.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.linkForgot.Location = new System.Drawing.Point(959, 373);
+            this.linkForgot.Location = new System.Drawing.Point(1025, 365);
+            this.linkForgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkForgot.Name = "linkForgot";
-            this.linkForgot.Size = new System.Drawing.Size(218, 34);
+            this.linkForgot.Size = new System.Drawing.Size(149, 23);
             this.linkForgot.TabIndex = 4;
             this.linkForgot.TabStop = true;
             this.linkForgot.Text = "Lupa Password?";
@@ -95,9 +99,10 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(621, 92);
+            this.label2.Location = new System.Drawing.Point(802, 196);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(575, 86);
+            this.label2.Size = new System.Drawing.Size(382, 58);
             this.label2.TabIndex = 5;
             this.label2.Text = "Selamat Datang!";
             // 
@@ -107,9 +112,10 @@
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnLogin.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(646, 433);
+            this.btnLogin.Location = new System.Drawing.Point(806, 401);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(531, 53);
+            this.btnLogin.Size = new System.Drawing.Size(372, 32);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -120,9 +126,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(717, 517);
+            this.label3.Location = new System.Drawing.Point(856, 451);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 29);
+            this.label3.Size = new System.Drawing.Size(151, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "Belum punya akun?";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -133,9 +140,10 @@
             this.linkRegister.AutoSize = true;
             this.linkRegister.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.linkRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.linkRegister.Location = new System.Drawing.Point(959, 517);
+            this.linkRegister.Location = new System.Drawing.Point(1025, 451);
+            this.linkRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkRegister.Name = "linkRegister";
-            this.linkRegister.Size = new System.Drawing.Size(128, 29);
+            this.linkRegister.Size = new System.Drawing.Size(82, 19);
             this.linkRegister.TabIndex = 8;
             this.linkRegister.TabStop = true;
             this.linkRegister.Text = "Buat akun";
@@ -143,10 +151,10 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1259, 663);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.linkRegister);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogin);
@@ -155,8 +163,10 @@
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
