@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "74jWpvrTmsYhiNSy8fygqzoC0ADFU4DS9aBCeRzK1sz5Shx69/iM0mO3kWszgdhkGamOWvSjxpiS3wBuno+irg==",
+  "dgSpecHash": "u9i+LL7klqifIAOycDuR4GBv10yJ5U1UScZs5XLzE3567B23JPoRpMStn0wLJx6oJiU1YN/kl1DOUA8k5SToYg==",
   "success": true,
-  "projectFilePath": "D:\\Mata Kuliah\\Semester 5\\junpro\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\Wealthify.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ACER\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.5\\guna.ui2.winforms.2.0.3.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Guna.UI2.WinForms 2.0.3.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
