@@ -15,7 +15,7 @@ namespace Wealthify
         private string urlArticle;
 
 
-        public int ArticleId { get => articleId }
+        public int ArticleId { get => articleId; }
 
         public string Judul { get => judul; set => judul = value; }
 
