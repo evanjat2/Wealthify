@@ -62,8 +62,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.btnTambahKantong = new System.Windows.Forms.Button();
-            this.dgv = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -439,33 +436,12 @@
             this.btnTambahKantong.UseVisualStyleBackColor = false;
             this.btnTambahKantong.Click += new System.EventHandler(this.btnTambahKantong_Click);
             // 
-            // dgv
-            // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(593, 211);
-            this.dgv.Name = "dgv";
-            this.dgv.RowTemplate.Height = 25;
-            this.dgv.Size = new System.Drawing.Size(349, 175);
-            this.dgv.TabIndex = 30;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(472, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Laporan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 749);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgv);
             this.Controls.Add(this.btnTambahKantong);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -500,7 +476,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,7 +516,5 @@
         private Label label24;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Button btnTambahKantong;
-        private DataGridView dgv;
-        private Button button1;
     }
 }

@@ -38,25 +38,5 @@ namespace Wealthify
             TambahKantong tk = new TambahKantong();
             tk.Show();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conn.Open();
-                dgv.DataSource = null;
-                sql = "select * from lihat_kantong()";
-                cmd = new NpgsqlCommand(sql, conn);
-                dt = new DataTable();
-                NpgsqlDataReader rd = cmd.ExecuteReader();
-                dt.Load(rd);
-                dgv.DataSource = dt;
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error:" + ex.Message, "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
     }
 }
