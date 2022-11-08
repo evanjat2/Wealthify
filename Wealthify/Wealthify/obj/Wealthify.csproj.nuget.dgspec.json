@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\Wealthify.csproj": {}
+    "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj": {}
   },
   "projects": {
-    "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\Wealthify.csproj": {
+    "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\Wealthify.csproj",
+        "projectUniqueName": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
         "projectName": "Wealthify",
-        "projectPath": "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\Wealthify.csproj",
+        "projectPath": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\obj\\",
+        "outputPath": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.3.5, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.7, )"
             }
           },
           "imports": [

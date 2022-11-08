@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u9i+LL7klqifIAOycDuR4GBv10yJ5U1UScZs5XLzE3567B23JPoRpMStn0wLJx6oJiU1YN/kl1DOUA8k5SToYg==",
+  "dgSpecHash": "3w2ryQ0rSX7WscG4uYk9wQNlG6VW5apWLvUVVBoomNsJGX+tPnRXOwx7PGFTAh5lphUMFM6pJASZ4hn7cG0A1A==",
   "success": true,
-  "projectFilePath": "D:\\Github\\Wealthify - Copy\\Wealthify\\Wealthify\\Wealthify.csproj",
+  "projectFilePath": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ACER\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.5\\guna.ui2.winforms.2.0.3.5.nupkg.sha512"
+    "C:\\Users\\ACER\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.5\\guna.ui2.winforms.2.0.3.5.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
+    "C:\\Users\\ACER\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": [
     {
