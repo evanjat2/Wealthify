@@ -43,3 +43,8 @@ D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Guna.UI2.dll
 D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.CopyComplete
 D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Npgsql.dll
 D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.TambahKantong.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Guna.UI2.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Npgsql.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Laporan.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.TambahKantong.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.CopyComplete

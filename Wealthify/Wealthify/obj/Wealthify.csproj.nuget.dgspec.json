@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj": {}
+    "D:\\Mata Kuliah\\Semester 5\\junpro\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj": {}
   },
   "projects": {
-    "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj": {
+    "D:\\Mata Kuliah\\Semester 5\\junpro\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
+        "projectUniqueName": "D:\\Mata Kuliah\\Semester 5\\junpro\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
         "projectName": "Wealthify",
-        "projectPath": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\Wealthify\\Wealthify\\Wealthify\\obj\\",
+        "projectPath": "D:\\Mata Kuliah\\Semester 5\\junpro\\Wealthify\\Wealthify\\Wealthify\\Wealthify.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "D:\\Mata Kuliah\\Semester 5\\junpro\\Wealthify\\Wealthify\\Wealthify\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
