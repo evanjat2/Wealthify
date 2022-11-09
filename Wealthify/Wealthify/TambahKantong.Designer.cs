@@ -83,6 +83,7 @@
             this.cbJenisKantong.Name = "cbJenisKantong";
             this.cbJenisKantong.Size = new System.Drawing.Size(218, 33);
             this.cbJenisKantong.TabIndex = 3;
+            this.cbJenisKantong.SelectedIndexChanged += new System.EventHandler(this.cbJenisKantong_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -103,6 +104,7 @@
             this.tbNamaKantong.PlaceholderText = "Masukkan nama kantong";
             this.tbNamaKantong.Size = new System.Drawing.Size(218, 31);
             this.tbNamaKantong.TabIndex = 5;
+            this.tbNamaKantong.TextChanged += new System.EventHandler(this.tbNamaKantong_TextChanged);
             // 
             // tbSaldo
             // 

@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS public.pengguna
     email character varying(20) COLLATE pg_catalog."default" NOT NULL,
     no_hp integer NOT NULL,
     password character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    saldo double precision,
+    saldo character varying(20),
     CONSTRAINT pengguna_pk PRIMARY KEY (user_id)
 )
 
@@ -32,7 +32,7 @@ create FUNCTION tambah_kantong
 (
 	_jenis_kantong character varying,
     _nama_kantong character varying,
-    _saldo double precision
+    _saldo int
 )
 returns int AS
 '
@@ -65,7 +65,7 @@ returns table
 (
 	_jenis_kantong character varying,
     _nama_kantong character varying,
-    _saldo double precision
+    _saldo character varying,
 )
 language plpgsql
 as
