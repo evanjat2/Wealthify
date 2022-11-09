@@ -50,5 +50,10 @@ namespace Wealthify
         {
 
         }
+
+        private void tbEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

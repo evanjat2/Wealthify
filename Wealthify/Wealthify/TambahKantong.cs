@@ -39,7 +39,7 @@ namespace Wealthify
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_jenis_kantong", cbJenisKantong.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("_nama_kantong", tbNamaKantong.Text);
-                cmd.Parameters.AddWithValue("_saldo", tbSaldo.Text);
+                cmd.Parameters.AddWithValue("_saldo", Convert.ToInt32(tbSaldo.Text));
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Kantong telah berhasil ditambahkan", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -54,6 +54,16 @@ namespace Wealthify
         }
 
         private void tbJenisKantong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbJenisKantong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNamaKantong_TextChanged(object sender, EventArgs e)
         {
 
         }
