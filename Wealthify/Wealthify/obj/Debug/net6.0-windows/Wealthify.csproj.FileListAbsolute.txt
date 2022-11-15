@@ -1,0 +1,50 @@
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.AssemblyReference.cache
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Form1.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Login.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.GenerateResource.cache
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.AssemblyInfoInputs.cache
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.AssemblyInfo.cs
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.CoreCompileInputs.cache
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.exe
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.deps.json
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.runtimeconfig.json
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.pdb
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\refint\Wealthify.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.pdb
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.genruntimeconfig.cache
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\ref\Wealthify.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Properties.Resources.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.SignUp.resources
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.exe
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.deps.json
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.runtimeconfig.json
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.dll
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Wealthify.pdb
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.AssemblyReference.cache
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Form1.resources
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Login.resources
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Properties.Resources.resources
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.SignUp.resources
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.GenerateResource.cache
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.AssemblyInfoInputs.cache
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.AssemblyInfo.cs
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.CoreCompileInputs.cache
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.dll
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\refint\Wealthify.dll
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.pdb
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.genruntimeconfig.cache
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\ref\Wealthify.dll
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Laporan.resources
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Guna.UI2.dll
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.CopyComplete
+D:\Github\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Npgsql.dll
+D:\Github\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.TambahKantong.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Guna.UI2.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\bin\Debug\net6.0-windows\Npgsql.dll
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.Laporan.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.TambahKantong.resources
+D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net6.0-windows\Wealthify.csproj.CopyComplete
