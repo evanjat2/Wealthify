@@ -1,13 +1,12 @@
 ---- table pengguna ----
 CREATE TABLE IF NOT EXISTS public.pengguna
 (
-    user_id integer NOT NULL,
+    user_id serial primary key,
     username character varying(20) COLLATE pg_catalog."default" NOT NULL,
     email character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    no_hp integer NOT NULL,
+    no_hp character varying(20) DEFAULT 0,
     password character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    saldo character varying(20),
-    CONSTRAINT pengguna_pk PRIMARY KEY (user_id)
+    saldo int default 0
 )
 
 
