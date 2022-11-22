@@ -1,8 +1,0 @@
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.csproj.AssemblyReference.cache
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.Form1.resources
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.Login.resources
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.csproj.GenerateResource.cache
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.GeneratedMSBuildEditorConfig.editorconfig
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.AssemblyInfoInputs.cache
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.AssemblyInfo.cs
-D:\Mata Kuliah\Semester 5\junpro\Wealthify\Wealthify\Wealthify\obj\Debug\net5.0-windows\Wealthify.csproj.CoreCompileInputs.cache
