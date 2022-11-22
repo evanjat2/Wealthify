@@ -13,7 +13,7 @@ namespace Wealthify
         private string isi;
         private DateTime tanggal;
         private string urlArticle;
-
+        private static int index = 0;
 
         public int ArticleId { get => articleId; }
 
@@ -22,6 +22,8 @@ namespace Wealthify
         public string Isi { get => isi; set => isi = value; }   
 
         public string UrlArticle { get => urlArticle; set => urlArticle = value; }
+
+        public static int Index { get => index; set => index = value; }
 
         public DateTime Tanggal { get => tanggal; set => tanggal = value; }
         

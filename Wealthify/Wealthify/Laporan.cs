@@ -41,5 +41,36 @@ namespace Wealthify
             TambahKantong tk = new TambahKantong();
             tk.Show();
         }
+
+        private void panelArtikel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelArtikel_Click(object sender, EventArgs e)
+        {
+            ArtikelForm fartikel = new ArtikelForm();
+            fartikel.Show();
+            this.Hide();
+        }
+
+        private void lblArtikel_Click(object sender, EventArgs e)
+        {
+            ArtikelForm fartikel = new ArtikelForm();
+            fartikel.Show();
+            this.Hide();
+        }
+
+        private void btnArtikel_Click(object sender, EventArgs e)
+        {
+            ArtikelForm fartikel = new ArtikelForm();
+            fartikel.Show();
+            this.Hide();
+        }
+
+        private void lblLaporan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

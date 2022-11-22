@@ -30,17 +30,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblAdmin = new System.Windows.Forms.Label();
             this.lblKeluar = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblArtikel = new System.Windows.Forms.Label();
+            this.lblLaporan = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnArtikel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnTransaksi = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,7 +65,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.btnTambahKantong = new System.Windows.Forms.Button();
-            this.lblAdmin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,19 +82,31 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblArtikel);
+            this.panel1.Controls.Add(this.lblLaporan);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btnArtikel);
+            this.panel1.Controls.Add(this.btnTransaksi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 1050);
             this.panel1.TabIndex = 0;
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdmin.Location = new System.Drawing.Point(180, 320);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(83, 29);
+            this.lblAdmin.TabIndex = 30;
+            this.lblAdmin.Text = "Admin";
             // 
             // lblKeluar
             // 
@@ -137,28 +151,30 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // lblArtikel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(140, 717);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 29);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Artikel";
+            this.lblArtikel.AutoSize = true;
+            this.lblArtikel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblArtikel.Location = new System.Drawing.Point(140, 717);
+            this.lblArtikel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArtikel.Name = "lblArtikel";
+            this.lblArtikel.Size = new System.Drawing.Size(90, 29);
+            this.lblArtikel.TabIndex = 6;
+            this.lblArtikel.Text = "Artikel";
+            this.lblArtikel.Click += new System.EventHandler(this.lblArtikel_Click);
             // 
-            // label4
+            // lblLaporan
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(140, 612);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 29);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Laporan";
+            this.lblLaporan.AutoSize = true;
+            this.lblLaporan.BackColor = System.Drawing.Color.White;
+            this.lblLaporan.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLaporan.Location = new System.Drawing.Point(140, 612);
+            this.lblLaporan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLaporan.Name = "lblLaporan";
+            this.lblLaporan.Size = new System.Drawing.Size(107, 29);
+            this.lblLaporan.TabIndex = 5;
+            this.lblLaporan.Text = "Laporan";
+            this.lblLaporan.Click += new System.EventHandler(this.lblLaporan_Click);
             // 
             // label3
             // 
@@ -207,19 +223,73 @@
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 52;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.CustomizableEdges.BottomRight = false;
+            this.guna2Button1.CustomizableEdges.TopRight = false;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.FocusedColor = System.Drawing.Color.White;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(17, 573);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(489, 107);
+            this.guna2Button1.Size = new System.Drawing.Size(431, 107);
             this.guna2Button1.TabIndex = 29;
             this.guna2Button1.Text = "guna2Button1";
+            // 
+            // btnArtikel
+            // 
+            this.btnArtikel.AutoRoundedCorners = true;
+            this.btnArtikel.BorderRadius = 52;
+            this.btnArtikel.CustomizableEdges.BottomRight = false;
+            this.btnArtikel.CustomizableEdges.TopRight = false;
+            this.btnArtikel.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnArtikel.DisabledState.CustomBorderColor = System.Drawing.Color.White;
+            this.btnArtikel.DisabledState.FillColor = System.Drawing.Color.White;
+            this.btnArtikel.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnArtikel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnArtikel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnArtikel.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.Location = new System.Drawing.Point(17, 690);
+            this.btnArtikel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnArtikel.Name = "btnArtikel";
+            this.btnArtikel.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.Size = new System.Drawing.Size(431, 107);
+            this.btnArtikel.TabIndex = 33;
+            this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);
+            // 
+            // btnTransaksi
+            // 
+            this.btnTransaksi.AutoRoundedCorners = true;
+            this.btnTransaksi.BorderRadius = 46;
+            this.btnTransaksi.CustomizableEdges.BottomRight = false;
+            this.btnTransaksi.CustomizableEdges.TopRight = false;
+            this.btnTransaksi.DisabledState.BorderColor = System.Drawing.Color.White;
+            this.btnTransaksi.DisabledState.CustomBorderColor = System.Drawing.Color.White;
+            this.btnTransaksi.DisabledState.FillColor = System.Drawing.Color.White;
+            this.btnTransaksi.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnTransaksi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnTransaksi.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnTransaksi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTransaksi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnTransaksi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnTransaksi.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTransaksi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnTransaksi.Location = new System.Drawing.Point(17, 472);
+            this.btnTransaksi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTransaksi.Name = "btnTransaksi";
+            this.btnTransaksi.Size = new System.Drawing.Size(431, 94);
+            this.btnTransaksi.TabIndex = 34;
             // 
             // pictureBox5
             // 
@@ -471,16 +541,6 @@
             this.btnTambahKantong.UseVisualStyleBackColor = false;
             this.btnTambahKantong.Click += new System.EventHandler(this.btnTambahKantong_Click);
             // 
-            // lblAdmin
-            // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAdmin.Location = new System.Drawing.Point(180, 320);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(83, 29);
-            this.lblAdmin.TabIndex = 30;
-            this.lblAdmin.Text = "Admin";
-            // 
             // Laporan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -532,8 +592,8 @@
         private Panel panel1;
         private Label lblName;
         private PictureBox pictureBox1;
-        private Label label5;
-        private Label label4;
+        private Label lblArtikel;
+        private Label lblLaporan;
         private Label label3;
         private Label lblEmail;
         private PictureBox pictureBox4;
@@ -563,5 +623,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Button btnTambahKantong;
         private Label lblAdmin;
+        private Guna.UI2.WinForms.Guna2Button btnArtikel;
+        private Guna.UI2.WinForms.Guna2Button btnTransaksi;
     }
 }

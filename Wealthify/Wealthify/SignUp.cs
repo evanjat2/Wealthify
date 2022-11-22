@@ -33,7 +33,6 @@ namespace Wealthify
             if (dt.Rows.Count > 0 )
             {
                 MessageBox.Show("Email telah dipakai", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             else
             {
