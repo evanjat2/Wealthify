@@ -113,7 +113,7 @@ namespace Wealthify
                 cmd.Parameters.AddWithValue("_saldo", Convert.ToInt32(tbSaldo.Text));
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
-                    MessageBox.Show("Kantong telah berhasil ditambahkan", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Kantong telah berhasil diubah", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
                 }

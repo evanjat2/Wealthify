@@ -58,6 +58,8 @@
             this.lblJenisKantong = new System.Windows.Forms.Label();
             this.btnHapusTransaksi = new System.Windows.Forms.Button();
             this.btnUbahTransaksi = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpTanggalTransaksi = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,6 +110,7 @@
             this.lblKeluar.Size = new System.Drawing.Size(56, 19);
             this.lblKeluar.TabIndex = 10;
             this.lblKeluar.Text = "Keluar";
+            this.lblKeluar.Click += new System.EventHandler(this.lblKeluar_Click);
             // 
             // pictureBox4
             // 
@@ -197,7 +200,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(0, 281);
+            this.panel2.Location = new System.Drawing.Point(0, 282);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(305, 62);
             this.panel2.TabIndex = 30;
@@ -240,11 +243,12 @@
             // 
             this.dgvTransaksi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaksi.Location = new System.Drawing.Point(360, 170);
+            this.dgvTransaksi.Location = new System.Drawing.Point(360, 173);
             this.dgvTransaksi.Name = "dgvTransaksi";
             this.dgvTransaksi.RowTemplate.Height = 25;
-            this.dgvTransaksi.Size = new System.Drawing.Size(953, 509);
+            this.dgvTransaksi.Size = new System.Drawing.Size(953, 506);
             this.dgvTransaksi.TabIndex = 31;
+            this.dgvTransaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaksi_CellContentClick);
             // 
             // btnTambahTransaksi
             // 
@@ -252,7 +256,7 @@
             this.btnTambahTransaksi.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTambahTransaksi.Location = new System.Drawing.Point(998, 47);
             this.btnTambahTransaksi.Name = "btnTambahTransaksi";
-            this.btnTambahTransaksi.Size = new System.Drawing.Size(89, 106);
+            this.btnTambahTransaksi.Size = new System.Drawing.Size(93, 63);
             this.btnTambahTransaksi.TabIndex = 32;
             this.btnTambahTransaksi.Text = "Tambah Transaksi";
             this.btnTambahTransaksi.UseVisualStyleBackColor = false;
@@ -262,9 +266,9 @@
             // 
             this.btnTampilTransaksi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnTampilTransaksi.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTampilTransaksi.Location = new System.Drawing.Point(679, 122);
+            this.btnTampilTransaksi.Location = new System.Drawing.Point(998, 121);
             this.btnTampilTransaksi.Name = "btnTampilTransaksi";
-            this.btnTampilTransaksi.Size = new System.Drawing.Size(292, 31);
+            this.btnTampilTransaksi.Size = new System.Drawing.Size(315, 28);
             this.btnTampilTransaksi.TabIndex = 33;
             this.btnTampilTransaksi.Text = "Tampilkan Transaksi";
             this.btnTampilTransaksi.UseVisualStyleBackColor = false;
@@ -298,17 +302,17 @@
             // 
             // tbCatatan
             // 
-            this.tbCatatan.Location = new System.Drawing.Point(798, 87);
+            this.tbCatatan.Location = new System.Drawing.Point(785, 125);
             this.tbCatatan.Name = "tbCatatan";
             this.tbCatatan.PlaceholderText = "Tambahkan catatan";
-            this.tbCatatan.Size = new System.Drawing.Size(173, 23);
+            this.tbCatatan.Size = new System.Drawing.Size(186, 23);
             this.tbCatatan.TabIndex = 40;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(679, 90);
+            this.label2.Location = new System.Drawing.Point(679, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 39;
@@ -316,10 +320,10 @@
             // 
             // tbNominal
             // 
-            this.tbNominal.Location = new System.Drawing.Point(798, 49);
+            this.tbNominal.Location = new System.Drawing.Point(785, 87);
             this.tbNominal.Name = "tbNominal";
             this.tbNominal.PlaceholderText = "Masukkan nominal";
-            this.tbNominal.Size = new System.Drawing.Size(173, 23);
+            this.tbNominal.Size = new System.Drawing.Size(186, 23);
             this.tbNominal.TabIndex = 38;
             // 
             // cbJenisTransaksi
@@ -338,7 +342,7 @@
             // 
             this.lblSaldo.AutoSize = true;
             this.lblSaldo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSaldo.Location = new System.Drawing.Point(679, 53);
+            this.lblSaldo.Location = new System.Drawing.Point(679, 91);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(69, 19);
             this.lblSaldo.TabIndex = 36;
@@ -368,23 +372,44 @@
             // 
             this.btnHapusTransaksi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnHapusTransaksi.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnHapusTransaksi.Location = new System.Drawing.Point(1224, 48);
+            this.btnHapusTransaksi.Location = new System.Drawing.Point(1220, 48);
             this.btnHapusTransaksi.Name = "btnHapusTransaksi";
-            this.btnHapusTransaksi.Size = new System.Drawing.Size(89, 106);
+            this.btnHapusTransaksi.Size = new System.Drawing.Size(93, 62);
             this.btnHapusTransaksi.TabIndex = 44;
             this.btnHapusTransaksi.Text = "Hapus Transaksi";
             this.btnHapusTransaksi.UseVisualStyleBackColor = false;
+            this.btnHapusTransaksi.Click += new System.EventHandler(this.btnHapusTransaksi_Click);
             // 
             // btnUbahTransaksi
             // 
             this.btnUbahTransaksi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnUbahTransaksi.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUbahTransaksi.Location = new System.Drawing.Point(1112, 47);
+            this.btnUbahTransaksi.Location = new System.Drawing.Point(1108, 47);
             this.btnUbahTransaksi.Name = "btnUbahTransaksi";
-            this.btnUbahTransaksi.Size = new System.Drawing.Size(89, 106);
+            this.btnUbahTransaksi.Size = new System.Drawing.Size(96, 63);
             this.btnUbahTransaksi.TabIndex = 45;
             this.btnUbahTransaksi.Text = "Ubah Transaksi";
             this.btnUbahTransaksi.UseVisualStyleBackColor = false;
+            this.btnUbahTransaksi.Click += new System.EventHandler(this.btnUbahTransaksi_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(679, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 19);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Tanggal";
+            // 
+            // dtpTanggalTransaksi
+            // 
+            this.dtpTanggalTransaksi.CustomFormat = "";
+            this.dtpTanggalTransaksi.Location = new System.Drawing.Point(785, 49);
+            this.dtpTanggalTransaksi.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtpTanggalTransaksi.Name = "dtpTanggalTransaksi";
+            this.dtpTanggalTransaksi.Size = new System.Drawing.Size(186, 23);
+            this.dtpTanggalTransaksi.TabIndex = 47;
             // 
             // Transaksi
             // 
@@ -392,6 +417,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.Controls.Add(this.dtpTanggalTransaksi);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnUbahTransaksi);
             this.Controls.Add(this.btnHapusTransaksi);
             this.Controls.Add(this.cbKantong);
@@ -458,5 +485,7 @@
         private Label lblJenisKantong;
         private Button btnHapusTransaksi;
         private Button btnUbahTransaksi;
+        private Label label6;
+        private DateTimePicker dtpTanggalTransaksi;
     }
 }
