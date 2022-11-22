@@ -55,6 +55,14 @@
             this.btnTambahKantong = new System.Windows.Forms.Button();
             this.dgvKantong = new System.Windows.Forms.DataGridView();
             this.btnTampilKantong = new System.Windows.Forms.Button();
+            this.btnUbahKantong = new System.Windows.Forms.Button();
+            this.tbSaldo = new System.Windows.Forms.TextBox();
+            this.tbNamaKantong = new System.Windows.Forms.TextBox();
+            this.cbJenisKantong = new System.Windows.Forms.ComboBox();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblNamaKantong = new System.Windows.Forms.Label();
+            this.lblJenisKantong = new System.Windows.Forms.Label();
+            this.btnHapusKantong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -269,7 +277,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(914, 202);
+            this.label20.Location = new System.Drawing.Point(745, 300);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(311, 25);
             this.label20.TabIndex = 24;
@@ -280,7 +288,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(914, 238);
+            this.label21.Location = new System.Drawing.Point(745, 336);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(176, 25);
             this.label21.TabIndex = 25;
@@ -291,7 +299,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(914, 273);
+            this.label22.Location = new System.Drawing.Point(745, 371);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(338, 50);
             this.label22.TabIndex = 26;
@@ -325,7 +333,7 @@
             // 
             this.btnTambahKantong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnTambahKantong.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTambahKantong.Location = new System.Drawing.Point(914, 47);
+            this.btnTambahKantong.Location = new System.Drawing.Point(360, 170);
             this.btnTambahKantong.Name = "btnTambahKantong";
             this.btnTambahKantong.Size = new System.Drawing.Size(102, 62);
             this.btnTambahKantong.TabIndex = 29;
@@ -337,23 +345,105 @@
             // 
             this.dgvKantong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKantong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKantong.Location = new System.Drawing.Point(360, 47);
+            this.dgvKantong.Location = new System.Drawing.Point(730, 44);
             this.dgvKantong.Name = "dgvKantong";
             this.dgvKantong.RowTemplate.Height = 25;
-            this.dgvKantong.Size = new System.Drawing.Size(542, 238);
+            this.dgvKantong.Size = new System.Drawing.Size(579, 242);
             this.dgvKantong.TabIndex = 30;
+            this.dgvKantong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKantong_CellContentClick);
             // 
             // btnTampilKantong
             // 
             this.btnTampilKantong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnTampilKantong.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTampilKantong.Location = new System.Drawing.Point(360, 294);
+            this.btnTampilKantong.Location = new System.Drawing.Point(360, 247);
             this.btnTampilKantong.Name = "btnTampilKantong";
-            this.btnTampilKantong.Size = new System.Drawing.Size(542, 31);
+            this.btnTampilKantong.Size = new System.Drawing.Size(341, 39);
             this.btnTampilKantong.TabIndex = 31;
             this.btnTampilKantong.Text = "Tampilkan Kantong";
             this.btnTampilKantong.UseVisualStyleBackColor = false;
             this.btnTampilKantong.Click += new System.EventHandler(this.btnTampilKantong_Click);
+            // 
+            // btnUbahKantong
+            // 
+            this.btnUbahKantong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnUbahKantong.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUbahKantong.Location = new System.Drawing.Point(481, 170);
+            this.btnUbahKantong.Name = "btnUbahKantong";
+            this.btnUbahKantong.Size = new System.Drawing.Size(102, 62);
+            this.btnUbahKantong.TabIndex = 32;
+            this.btnUbahKantong.Text = "Ubah Kantong";
+            this.btnUbahKantong.UseVisualStyleBackColor = false;
+            this.btnUbahKantong.Click += new System.EventHandler(this.btnUbahKantong_Click);
+            // 
+            // tbSaldo
+            // 
+            this.tbSaldo.Location = new System.Drawing.Point(498, 123);
+            this.tbSaldo.Name = "tbSaldo";
+            this.tbSaldo.PlaceholderText = "Masukkan saldo awal";
+            this.tbSaldo.Size = new System.Drawing.Size(203, 23);
+            this.tbSaldo.TabIndex = 38;
+            // 
+            // tbNamaKantong
+            // 
+            this.tbNamaKantong.Location = new System.Drawing.Point(498, 86);
+            this.tbNamaKantong.Name = "tbNamaKantong";
+            this.tbNamaKantong.PlaceholderText = "Masukkan nama kantong";
+            this.tbNamaKantong.Size = new System.Drawing.Size(203, 23);
+            this.tbNamaKantong.TabIndex = 37;
+            // 
+            // cbJenisKantong
+            // 
+            this.cbJenisKantong.FormattingEnabled = true;
+            this.cbJenisKantong.Items.AddRange(new object[] {
+            "Tunai",
+            "E-Wallet",
+            "Rekening"});
+            this.cbJenisKantong.Location = new System.Drawing.Point(498, 44);
+            this.cbJenisKantong.Name = "cbJenisKantong";
+            this.cbJenisKantong.Size = new System.Drawing.Size(203, 23);
+            this.cbJenisKantong.TabIndex = 36;
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSaldo.Location = new System.Drawing.Point(360, 127);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(50, 19);
+            this.lblSaldo.TabIndex = 35;
+            this.lblSaldo.Text = "Saldo";
+            // 
+            // lblNamaKantong
+            // 
+            this.lblNamaKantong.AutoSize = true;
+            this.lblNamaKantong.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNamaKantong.Location = new System.Drawing.Point(360, 86);
+            this.lblNamaKantong.Name = "lblNamaKantong";
+            this.lblNamaKantong.Size = new System.Drawing.Size(116, 19);
+            this.lblNamaKantong.TabIndex = 34;
+            this.lblNamaKantong.Text = "Nama Kantong";
+            // 
+            // lblJenisKantong
+            // 
+            this.lblJenisKantong.AutoSize = true;
+            this.lblJenisKantong.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblJenisKantong.Location = new System.Drawing.Point(360, 47);
+            this.lblJenisKantong.Name = "lblJenisKantong";
+            this.lblJenisKantong.Size = new System.Drawing.Size(111, 19);
+            this.lblJenisKantong.TabIndex = 33;
+            this.lblJenisKantong.Text = "Jenis Kantong";
+            // 
+            // btnHapusKantong
+            // 
+            this.btnHapusKantong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnHapusKantong.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHapusKantong.Location = new System.Drawing.Point(599, 170);
+            this.btnHapusKantong.Name = "btnHapusKantong";
+            this.btnHapusKantong.Size = new System.Drawing.Size(102, 62);
+            this.btnHapusKantong.TabIndex = 39;
+            this.btnHapusKantong.Text = "Hapus Kantong";
+            this.btnHapusKantong.UseVisualStyleBackColor = false;
             // 
             // Laporan
             // 
@@ -361,6 +451,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.Controls.Add(this.btnHapusKantong);
+            this.Controls.Add(this.tbSaldo);
+            this.Controls.Add(this.tbNamaKantong);
+            this.Controls.Add(this.cbJenisKantong);
+            this.Controls.Add(this.lblSaldo);
+            this.Controls.Add(this.lblNamaKantong);
+            this.Controls.Add(this.lblJenisKantong);
+            this.Controls.Add(this.btnUbahKantong);
             this.Controls.Add(this.btnTampilKantong);
             this.Controls.Add(this.dgvKantong);
             this.Controls.Add(this.btnTambahKantong);
@@ -421,5 +519,13 @@
         private Panel panel2;
         public DataGridView dgvKantong;
         private Button btnTampilKantong;
+        private Button btnUbahKantong;
+        private TextBox tbSaldo;
+        private TextBox tbNamaKantong;
+        private ComboBox cbJenisKantong;
+        private Label lblSaldo;
+        private Label lblNamaKantong;
+        private Label lblJenisKantong;
+        private Button btnHapusKantong;
     }
 }
