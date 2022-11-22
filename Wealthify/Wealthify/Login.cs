@@ -43,6 +43,10 @@ namespace Wealthify
             var dt = CRUD.PerformCrud(CRUD.cmd);
             if (dt.Rows.Count > 0)
             {
+                Pengguna.Email = (string)dt.Rows[0]["email"];
+                Pengguna.Name = (string)dt.Rows[0]["username"];
+                Pengguna.UserID = (int)dt.Rows[0]["user_id"];
+                Pengguna.IsAdmin = (bool)dt.Rows[0]["isAdmin"];
                 MessageBox.Show("Berhasil Login", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Laporan flaporan = new Laporan();
                 flaporan.Show();

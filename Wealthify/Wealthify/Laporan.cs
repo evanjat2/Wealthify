@@ -25,6 +25,9 @@ namespace Wealthify
         private DataGridViewRow r;
         private void Laporan_Load(object sender, EventArgs e)
         {
+            lblAdmin.Visible = Pengguna.IsAdmin;
+            lblName.Text = Pengguna.Name;
+            lblEmail.Text = Pengguna.Email;
             conn = new NpgsqlConnection(connstring);
         }
 

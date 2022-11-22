@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS public.pengguna
     email character varying(20) COLLATE pg_catalog."default" NOT NULL,
     no_hp character varying(20) DEFAULT 0,
     password character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    saldo int default 0
+    saldo int default 0,
+    isAdmin bool default false
 )
 
 
