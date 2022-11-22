@@ -19,11 +19,10 @@ namespace Wealthify
             InitializeComponent();
         }
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=evan1234;Database=wealthify;";
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=wealthify;";
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
-        private DataGridViewRow r;
 
         private void TambahKantong_Load(object sender, EventArgs e)
         {
@@ -50,6 +49,7 @@ namespace Wealthify
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
             }
         }
 

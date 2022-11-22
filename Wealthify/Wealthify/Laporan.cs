@@ -22,18 +22,33 @@ namespace Wealthify
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
-        private DataGridViewRow r;
+
         private void Laporan_Load(object sender, EventArgs e)
         {
             lblAdmin.Visible = Pengguna.IsAdmin;
             lblName.Text = Pengguna.Name;
             lblEmail.Text = Pengguna.Email;
+            LihatKantong();
+        }
+
+        public void LihatKantong()
+        {
             conn = new NpgsqlConnection(connstring);
+            conn.Open();
+            dgvKantong.DataSource = null;
+            sql = "select * from lihat_kantong()";
+            cmd = new NpgsqlCommand(sql, conn);
+            dt = new DataTable();
+            NpgsqlDataReader rd = cmd.ExecuteReader();
+            dt.Load(rd);
+            dgvKantong.DataSource = dt;
+            dgvKantong.AutoResizeColumns();
+            conn.Close();
         }
 
         private void lblKeluar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnTambahKantong_Click(object sender, EventArgs e)
@@ -42,22 +57,15 @@ namespace Wealthify
             tk.Show();
         }
 
-        private void panelArtikel_Paint(object sender, PaintEventArgs e)
+        private void btnTampilKantong_Click(object sender, EventArgs e)
         {
-
+            LihatKantong();
         }
 
-        private void panelArtikel_Click(object sender, EventArgs e)
+        private void btnTransaksi_Click(object sender, EventArgs e)
         {
-            ArtikelForm fartikel = new ArtikelForm();
-            fartikel.Show();
-            this.Hide();
-        }
-
-        private void lblArtikel_Click(object sender, EventArgs e)
-        {
-            ArtikelForm fartikel = new ArtikelForm();
-            fartikel.Show();
+            Transaksi tr = new Transaksi();
+            tr.Show();
             this.Hide();
         }
 
@@ -66,11 +74,6 @@ namespace Wealthify
             ArtikelForm fartikel = new ArtikelForm();
             fartikel.Show();
             this.Hide();
-        }
-
-        private void lblLaporan_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

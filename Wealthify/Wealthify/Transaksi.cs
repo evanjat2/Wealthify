@@ -1,58 +1,65 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Wealthify
 {
-    internal class Transaksi
+    public partial class Transaksi : Form
     {
-        private int nomorTransaksi;
-        private string jenisTransaksi;
-        private string kategoriTransaksi;
-        private string namaKantong;
-        private float nominal;
-        private string catatan;
-
-        public int NomorTransaksi
+        
+        public Transaksi()
         {
-            get { return nomorTransaksi; }
+            InitializeComponent();
+        }
+        private NpgsqlConnection conn;
+        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=wealthify";
+        public DataTable dt;
+        public static NpgsqlCommand cmd;
+        private string sql = null;
+
+        private void Transaksi_Load(object sender, EventArgs e)
+        {
+            LihatTransaksi();
         }
 
-        public string JenisTransaksi
+        public void LihatTransaksi()
         {
-            get { return jenisTransaksi; }
-            set { jenisTransaksi = value; }
+            conn = new NpgsqlConnection(connstring);
+            conn.Open();
+            dgvTransaksi.DataSource = null;
+            sql = "select * from lihat_keuangan()";
+            cmd = new NpgsqlCommand(sql, conn);
+            dt = new DataTable();
+            NpgsqlDataReader rd = cmd.ExecuteReader();
+            dt.Load(rd);
+            dgvTransaksi.DataSource = dt;
+            dgvTransaksi.AutoResizeColumns();
+            conn.Close();
         }
 
-        public string KategoriTransaksi
+        private void btnLaporan_Click(object sender, EventArgs e)
         {
-            get { return kategoriTransaksi; }
-            set { kategoriTransaksi = value; }
+            Laporan lp = new Laporan();
+            lp.Show();
+            this.Hide();
         }
 
-        public string NamaKantong
+        private void btnTambahTransaksi_Click(object sender, EventArgs e)
         {
-            get { return namaKantong; }
-            set { namaKantong = value; }
+            TambahTransaksi tt = new TambahTransaksi();
+            tt.Show();
         }
 
-        public float Nominal
+        private void btnTampilTransaksi_Click(object sender, EventArgs e)
         {
-            get { return nominal; }
-            set { nominal = value; }
-        }
-
-        public string Catatan
-        {
-            get { return catatan; }
-            set { catatan = value; }
-        }
-
-        public void LaporanTransaksi(string jenisTransaksi, string kategoriTransaksi, string namaKantong, float nominal, string catatan)
-        {
-            return;
+            LihatTransaksi();
         }
     }
 }

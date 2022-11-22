@@ -19,5 +19,11 @@
     <Compile Update="TambahKantong.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TambahTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
