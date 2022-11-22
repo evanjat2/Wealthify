@@ -107,7 +107,7 @@ namespace Wealthify
                 conn.Open();
                 sql = @"select * from ubah_kantong(:_nomor_kantong,:_jenis_kantong,:_nama_kantong,:_saldo)";
                 cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_nomor_kantong", r.Cells["_nomor_kantong"].Value.ToString());
+                cmd.Parameters.AddWithValue("_nomor_kantong", r.Cells["_nomor_kantong"].Value);
                 cmd.Parameters.AddWithValue("_jenis_kantong", cbJenisKantong.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("_nama_kantong", tbNamaKantong.Text);
                 cmd.Parameters.AddWithValue("_saldo", Convert.ToInt32(tbSaldo.Text));

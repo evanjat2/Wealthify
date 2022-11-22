@@ -86,6 +86,7 @@ language plpgsql;
 CREATE OR REPLACE FUNCTION lihat_kantong()
 returns table
 (
+	_nomor_kantong integer,
 	_jenis_kantong character varying,
     _nama_kantong character varying,
     _saldo integer
@@ -95,7 +96,7 @@ as
 '
 BEGIN
 	return query
-	select jenis_kantong, nama_kantong, saldo from kantong;
+	select nomor_kantong, jenis_kantong, nama_kantong, saldo from kantong;
 end;
 '
 
@@ -114,7 +115,7 @@ BEGIN
 		jenis_kantong = _jenis_kantong,
 		nama_kantong = _nama_kantong,
 		saldo = _saldo
-	where id = _id;
+	where nomor_kantong = _nomor_kantong;
 	if found then
 		return 1;
 	else
@@ -165,6 +166,7 @@ language plpgsql;
 CREATE OR REPLACE FUNCTION lihat_keuangan()
 returns table
 (
+	_nomor_transaksi integer,
 	_nama_kantong character varying,
 	_jenis_transaksi character varying,
 	_kategori_transaksi character varying,
@@ -176,6 +178,6 @@ as
 '
 BEGIN
 	return query
-	select nama_kantong, jenis_transaksi, kategori_transaksi, nominal, catatan from keuangan;
+	select nomor_transaksi, nama_kantong, jenis_transaksi, kategori_transaksi, nominal, catatan from keuangan;
 end;
 '
