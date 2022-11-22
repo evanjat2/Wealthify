@@ -2,12 +2,21 @@
 CREATE TABLE IF NOT EXISTS public.pengguna
 (
     user_id serial primary key,
-    username character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    email character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    username character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(50) COLLATE pg_catalog."default" NOT NULL,
     no_hp character varying(20) DEFAULT 0,
-    password character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(50) COLLATE pg_catalog."default" NOT NULL,
     saldo int default 0,
     isAdmin bool default false
+)
+
+-- Tabel Artikel --
+CREATE TABLE IF NOT EXISTS public.artikel
+(
+    artikel_id serial primary key,
+    kategori character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    judul character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    konten character varying COLLATE pg_catalog."default" NOT NULL
 )
 
 
