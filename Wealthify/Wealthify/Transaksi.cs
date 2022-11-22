@@ -85,8 +85,16 @@ namespace Wealthify
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Transaksi telah berhasil ditambahkan", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    /*sql = @"select sum(nominal) as total from keuangan where nama_kantong = '" + cbKantong.SelectedItem.ToString() + "' and jenis_transaksi = 'Pemasukan'";
+                    sql = @"select * from ubah_kantong(:_nomor_kantong,:_jenis_kantong,:_nama_kantong,:_saldo) where _nama_kantong = '" + cbKantong.SelectedItem.ToString() + "'";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_nomor_kantong", "_nomor_kantong");
+                    cmd.Parameters.AddWithValue("_jenis_kantong", "_jenis_kantong");
+                    cmd.Parameters.AddWithValue("_nama_kantong", "_nama_kantong");
+                    cmd.Parameters.AddWithValue("_saldo", "_saldo" + Convert.ToInt32(tbNominal.Text));*/
                     conn.Close();
                     cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
+                    LihatTransaksi();
                 }
             }
             catch (Exception ex)
@@ -120,6 +128,7 @@ namespace Wealthify
                     MessageBox.Show("Transaksi telah berhasil diubah", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
+                    LihatTransaksi();
                 }
             }
             catch (Exception ex)
@@ -145,17 +154,13 @@ namespace Wealthify
                     sql = @"select * from hapus_keuangan(:_nomor_transaksi)";
                     cmd = new NpgsqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("_nomor_transaksi", r.Cells["_nomor_transaksi"].Value);
-                    cmd.Parameters.AddWithValue("_nama_kantong", cbKantong.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("_jenis_transaksi", cbJenisTransaksi.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("_kategori_transaksi", cbKategoriTransaksi.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("_tanggal", dtpTanggalTransaksi.Text);
-                    cmd.Parameters.AddWithValue("_nominal", Convert.ToInt32(tbNominal.Text));
-                    cmd.Parameters.AddWithValue("_catatan", tbCatatan.Text);
                     if ((int)cmd.ExecuteScalar() == 1)
                     {
-                        MessageBox.Show("Transaksi telah berhasil diubah", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Transaksi telah berhasil dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         conn.Close();
+                        LihatTransaksi();
                         cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
+                        r = null;
                     }
                 }
                 catch (Exception ex)

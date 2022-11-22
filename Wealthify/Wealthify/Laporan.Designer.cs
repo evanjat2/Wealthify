@@ -444,6 +444,7 @@
             this.btnHapusKantong.TabIndex = 39;
             this.btnHapusKantong.Text = "Hapus Kantong";
             this.btnHapusKantong.UseVisualStyleBackColor = false;
+            this.btnHapusKantong.Click += new System.EventHandler(this.btnHapusKantong_Click);
             // 
             // Laporan
             // 

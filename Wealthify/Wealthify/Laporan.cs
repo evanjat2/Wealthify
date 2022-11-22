@@ -49,15 +49,15 @@ namespace Wealthify
 
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
-            Transaksi tr = new Transaksi();
-            tr.Show();
+            Transaksi fTransaksi = new Transaksi();
+            fTransaksi.Show();
             this.Hide();
         }
 
         private void btnArtikel_Click(object sender, EventArgs e)
         {
-            ArtikelForm fartikel = new ArtikelForm();
-            fartikel.Show();
+            ArtikelForm fArtikel = new ArtikelForm();
+            fArtikel.Show();
             this.Hide();
         }
 
@@ -81,6 +81,7 @@ namespace Wealthify
                     MessageBox.Show("Kantong telah berhasil ditambahkan", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
+                    LihatKantong();
                 }
             }
             catch (Exception ex)
@@ -88,11 +89,6 @@ namespace Wealthify
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
-        }
-
-        private void btnTampilKantong_Click(object sender, EventArgs e)
-        {
-            LihatKantong();
         }
 
         private void btnUbahKantong_Click(object sender, EventArgs e)
@@ -116,6 +112,7 @@ namespace Wealthify
                     MessageBox.Show("Kantong telah berhasil diubah", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                     cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
+                    LihatKantong();
                 }
             }
             catch (Exception ex)
@@ -123,6 +120,45 @@ namespace Wealthify
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+        }
+
+        private void btnHapusKantong_Click(object sender, EventArgs e)
+        {
+            if (r == null)
+            {
+                MessageBox.Show("Pilih baris kantong yang ingin dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Apakah anda ingin menghapus kantong " + r.Cells["_nomor_kantong"].Value.ToString() + "?", "Hapus kantong",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                try
+                {
+                    conn.Open();
+                    sql = @"select * from hapus_kantong(:_nomor_kantong)";
+                    cmd = new NpgsqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("_nomor_kantong", r.Cells["_nomor_kantong"].Value);
+                    if ((int)cmd.ExecuteScalar() == 1)
+                    {
+                        MessageBox.Show("Kantong telah berhasil dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conn.Close();
+                        LihatKantong();
+                        cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
+                        r = null;
+                    }
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conn.Close();
+                }
+            }
+        }
+
+        private void btnTampilKantong_Click(object sender, EventArgs e)
+        {
+            LihatKantong();
         }
 
         private void dgvKantong_CellContentClick(object sender, DataGridViewCellEventArgs e)
