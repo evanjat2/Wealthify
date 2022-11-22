@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArtikelForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.lblKeluar = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -41,26 +44,30 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLaporan = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnArtikel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pbAfter = new System.Windows.Forms.Panel();
+            this.lblRead1 = new System.Windows.Forms.Label();
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.pbPrevious = new System.Windows.Forms.PictureBox();
             this.lblKonten1 = new System.Windows.Forms.Label();
             this.lblJudul1 = new System.Windows.Forms.Label();
             this.lblKategori1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblRead2 = new System.Windows.Forms.Label();
             this.lblKonten2 = new System.Windows.Forms.Label();
             this.lblJudul2 = new System.Windows.Forms.Label();
             this.lblKategori2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblRead3 = new System.Windows.Forms.Label();
             this.lblKonten3 = new System.Windows.Forms.Label();
             this.lblJudul3 = new System.Windows.Forms.Label();
             this.lblKategori3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,6 +82,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblAdmin);
             this.panel1.Controls.Add(this.lblKeluar);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -86,15 +94,48 @@
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Controls.Add(this.btnLaporan);
-            this.panel1.Controls.Add(this.guna2Button2);
+            this.panel1.Controls.Add(this.btnArtikel);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(436, 1050);
             this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(0, 689);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(436, 103);
+            this.panel2.TabIndex = 38;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::Wealthify.Properties.Resources.transaksi;
+            this.pictureBox5.Location = new System.Drawing.Point(57, 20);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(53, 67);
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(140, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Transaksi";
             // 
             // lblAdmin
             // 
@@ -184,6 +225,7 @@
             this.label3.Size = new System.Drawing.Size(124, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Transaksi";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblEmail
             // 
@@ -206,6 +248,7 @@
             this.lblName.Size = new System.Drawing.Size(230, 38);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Jeki Davidson";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -217,80 +260,38 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Button1
+            // btnArtikel
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 52;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(13, 684);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.White;
-            this.guna2Button1.Size = new System.Drawing.Size(489, 107);
-            this.guna2Button1.TabIndex = 29;
-            this.guna2Button1.Text = "guna2Button1";
+            this.btnArtikel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.btnArtikel.FlatAppearance.BorderSize = 0;
+            this.btnArtikel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(90)))));
+            this.btnArtikel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArtikel.Location = new System.Drawing.Point(-1, 576);
+            this.btnArtikel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnArtikel.Name = "btnArtikel";
+            this.btnArtikel.Size = new System.Drawing.Size(436, 103);
+            this.btnArtikel.TabIndex = 36;
+            this.btnArtikel.UseVisualStyleBackColor = false;
+            this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);
             // 
-            // btnLaporan
+            // button1
             // 
-            this.btnLaporan.AutoRoundedCorners = true;
-            this.btnLaporan.BorderRadius = 53;
-            this.btnLaporan.CustomizableEdges.BottomRight = false;
-            this.btnLaporan.CustomizableEdges.TopRight = false;
-            this.btnLaporan.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.btnLaporan.DisabledState.CustomBorderColor = System.Drawing.Color.White;
-            this.btnLaporan.DisabledState.FillColor = System.Drawing.Color.White;
-            this.btnLaporan.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnLaporan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.btnLaporan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.btnLaporan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLaporan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.btnLaporan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.btnLaporan.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLaporan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.btnLaporan.Location = new System.Drawing.Point(13, 569);
-            this.btnLaporan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLaporan.Name = "btnLaporan";
-            this.btnLaporan.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.btnLaporan.Size = new System.Drawing.Size(431, 109);
-            this.btnLaporan.TabIndex = 34;
-            this.btnLaporan.Click += new System.EventHandler(this.btnLaporan_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 53;
-            this.guna2Button2.CustomizableEdges.BottomRight = false;
-            this.guna2Button2.CustomizableEdges.TopRight = false;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.White;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.guna2Button2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.guna2Button2.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.guna2Button2.Location = new System.Drawing.Point(4, 450);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(431, 109);
-            this.guna2Button2.TabIndex = 35;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(90)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 474);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(436, 103);
+            this.button1.TabIndex = 37;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pbAfter
             // 
             this.pbAfter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.pbAfter.Controls.Add(this.lblRead1);
             this.pbAfter.Controls.Add(this.pbNext);
             this.pbAfter.Controls.Add(this.pbPrevious);
             this.pbAfter.Controls.Add(this.lblKonten1);
@@ -301,6 +302,17 @@
             this.pbAfter.Size = new System.Drawing.Size(1414, 502);
             this.pbAfter.TabIndex = 2;
             this.pbAfter.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // lblRead1
+            // 
+            this.lblRead1.AutoSize = true;
+            this.lblRead1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.lblRead1.Location = new System.Drawing.Point(1278, 453);
+            this.lblRead1.Name = "lblRead1";
+            this.lblRead1.Size = new System.Drawing.Size(115, 25);
+            this.lblRead1.TabIndex = 6;
+            this.lblRead1.Text = "Read More ...";
+            this.lblRead1.Click += new System.EventHandler(this.lblRead1_Click);
             // 
             // pbNext
             // 
@@ -357,7 +369,7 @@
             this.lblKategori1.AutoSize = true;
             this.lblKategori1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKategori1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblKategori1.Location = new System.Drawing.Point(78, 65);
+            this.lblKategori1.Location = new System.Drawing.Point(55, 63);
             this.lblKategori1.Name = "lblKategori1";
             this.lblKategori1.Size = new System.Drawing.Size(116, 32);
             this.lblKategori1.TabIndex = 2;
@@ -367,6 +379,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.panel3.Controls.Add(this.lblRead2);
             this.panel3.Controls.Add(this.lblKonten2);
             this.panel3.Controls.Add(this.lblJudul2);
             this.panel3.Controls.Add(this.lblKategori2);
@@ -374,6 +387,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(691, 374);
             this.panel3.TabIndex = 3;
+            // 
+            // lblRead2
+            // 
+            this.lblRead2.AutoSize = true;
+            this.lblRead2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.lblRead2.Location = new System.Drawing.Point(555, 303);
+            this.lblRead2.Name = "lblRead2";
+            this.lblRead2.Size = new System.Drawing.Size(115, 25);
+            this.lblRead2.TabIndex = 7;
+            this.lblRead2.Text = "Read More ...";
+            this.lblRead2.Click += new System.EventHandler(this.lblRead2_Click);
             // 
             // lblKonten2
             // 
@@ -412,6 +436,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.panel4.Controls.Add(this.lblRead3);
             this.panel4.Controls.Add(this.lblKonten3);
             this.panel4.Controls.Add(this.lblJudul3);
             this.panel4.Controls.Add(this.lblKategori3);
@@ -419,6 +444,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(691, 374);
             this.panel4.TabIndex = 7;
+            // 
+            // lblRead3
+            // 
+            this.lblRead3.AutoSize = true;
+            this.lblRead3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.lblRead3.Location = new System.Drawing.Point(555, 303);
+            this.lblRead3.Name = "lblRead3";
+            this.lblRead3.Size = new System.Drawing.Size(115, 25);
+            this.lblRead3.TabIndex = 8;
+            this.lblRead3.Text = "Read More ...";
+            this.lblRead3.Click += new System.EventHandler(this.lblRead3_Click);
             // 
             // lblKonten3
             // 
@@ -497,6 +533,9 @@
             this.Load += new System.EventHandler(this.ArtikelForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -527,9 +566,6 @@
         private Label lblEmail;
         private Label lblName;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnLaporan;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Panel pbAfter;
         private PictureBox pbPrevious;
         private Panel panel3;
@@ -546,5 +582,13 @@
         private Button btnAdd;
         private PictureBox pbNext;
         private Button btnUpdate;
+        private Label lblRead1;
+        private Label lblRead2;
+        private Label lblRead3;
+        private Button btnArtikel;
+        private Button button1;
+        private Panel panel2;
+        private PictureBox pictureBox5;
+        private Label label1;
     }
 }

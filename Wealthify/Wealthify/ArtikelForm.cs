@@ -48,43 +48,47 @@ namespace Wealthify
 
         }
 
+        private int index;
+        private int afterIndex;
+        private int secondAfterIndex;
+        private DataTable data;
         private void getArticle(string mySQL)
         {
             CRUD.cmd = new NpgsqlCommand(mySQL, CRUD.con);
-            var dt = CRUD.PerformCrud(CRUD.cmd);
-            var index = Artikel.Index;
-            int length = dt.Rows.Count;
-            if (dt.Rows.Count > 0)
+            data = CRUD.PerformCrud(CRUD.cmd);
+            index = Artikel.Index;
+            int length = data.Rows.Count;
+            if (data.Rows.Count > 0)
             {
-                lblKategori1.Text = (string)dt.Rows[index][1];
-                lblJudul1.Text = (string)dt.Rows[index][2];
-                lblKonten1.Text = (string)dt.Rows[index][3];
+                lblKategori1.Text = (string)data.Rows[index][1];
+                lblJudul1.Text = (string)data.Rows[index][2];
+                lblKonten1.Text = (string)data.Rows[index][3];
                 if (index + 1 == length)
                 {
-                    int afterIndex = 0;
-                    lblKategori2.Text = (string)dt.Rows[afterIndex][1];
-                    lblJudul2.Text = (string)dt.Rows[afterIndex][2];
-                    lblKonten2.Text = (string)dt.Rows[afterIndex][3];
+                    afterIndex = 0;
+                    lblKategori2.Text = (string)data.Rows[afterIndex][1];
+                    lblJudul2.Text = (string)data.Rows[afterIndex][2];
+                    lblKonten2.Text = (string)data.Rows[afterIndex][3];
                 }
                 else
                 {
-                    int afterIndex = index + 1;
-                    lblKategori2.Text = (string)dt.Rows[afterIndex][1];
-                    lblJudul2.Text = (string)dt.Rows[afterIndex][2];
-                    lblKonten2.Text = (string)dt.Rows[afterIndex][3];
+                    afterIndex = index + 1;
+                    lblKategori2.Text = (string)data.Rows[afterIndex][1];
+                    lblJudul2.Text = (string)data.Rows[afterIndex][2];
+                    lblKonten2.Text = (string)data.Rows[afterIndex][3];
                     if (afterIndex + 1 == length)
                     {
-                        int secondAfterIndex = 0;
-                        lblKategori3.Text = (string)dt.Rows[secondAfterIndex][1];
-                        lblJudul3.Text = (string)dt.Rows[secondAfterIndex][2];
-                        lblKonten3.Text = (string)dt.Rows[secondAfterIndex][3];
+                        secondAfterIndex = 0;
+                        lblKategori3.Text = (string)data.Rows[secondAfterIndex][1];
+                        lblJudul3.Text = (string)data.Rows[secondAfterIndex][2];
+                        lblKonten3.Text = (string)data.Rows[secondAfterIndex][3];
                     }
                     else
                     {
-                        int secondAfterIndex = afterIndex + 1;
-                        lblKategori3.Text = (string)dt.Rows[secondAfterIndex][1];
-                        lblJudul3.Text = (string)dt.Rows[secondAfterIndex][2];
-                        lblKonten3.Text = (string)dt.Rows[secondAfterIndex][3];
+                        secondAfterIndex = afterIndex + 1;
+                        lblKategori3.Text = (string)data.Rows[secondAfterIndex][1];
+                        lblJudul3.Text = (string)data.Rows[secondAfterIndex][2];
+                        lblKonten3.Text = (string)data.Rows[secondAfterIndex][3];
                     }
                 }
             }
@@ -97,14 +101,17 @@ namespace Wealthify
             Artikel.Index = 0;
             btnAdd.Visible = Pengguna.IsAdmin;
             btnUpdate.Visible = Pengguna.IsAdmin;
+            lblName.Text = Pengguna.Name;
+            lblEmail.Text = Pengguna.Email;
+            lblAdmin.Visible = Pengguna.IsAdmin;
         }
-
+        
         private void pbPrevious_Click(object sender, EventArgs e)
         {
             CRUD.sql = "SELECT * FROM artikel";
             CRUD.cmd = new NpgsqlCommand(CRUD.sql, CRUD.con);
             var dt = CRUD.PerformCrud(CRUD.cmd);
-            int index = Artikel.Index;
+            index = Artikel.Index;
             int length = dt.Rows.Count;
             if (index - 1 == -1){
                 Artikel.Index = length-1;
@@ -116,12 +123,13 @@ namespace Wealthify
             }
         }
 
+        
         private void pbNext_Click(object sender, EventArgs e)
         {
             CRUD.sql = "SELECT * FROM artikel";
             CRUD.cmd = new NpgsqlCommand(CRUD.sql, CRUD.con);
             var dt = CRUD.PerformCrud(CRUD.cmd);
-            int index = Artikel.Index;
+            index = Artikel.Index;
             int length = dt.Rows.Count;
             if (index + 1 == length)
             {
@@ -147,6 +155,51 @@ namespace Wealthify
             ArtikelListForm flist = new ArtikelListForm();
             flist.Show();
             this.Hide();
+        }
+        private void showForm()
+        {
+            ViewArticle fview = new ViewArticle();
+            fview.Show();
+            this.Close();
+        }
+
+        private void lblRead1_Click(object sender, EventArgs e)
+        {
+            Artikel.SelectedID = data.Rows[index][0].ToString();
+            showForm();
+        }
+
+        private void lblRead2_Click(object sender, EventArgs e)
+        {
+            Artikel.SelectedID = data.Rows[afterIndex][0].ToString();
+            showForm();
+        }
+
+        private void lblRead3_Click(object sender, EventArgs e)
+        {
+            Artikel.SelectedID = data.Rows[secondAfterIndex][0].ToString();
+            showForm();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Transaksi ftransaksi = new Transaksi();
+            ftransaksi.Show();
+            this.Close();
+        }
+
+        private void btnArtikel_Click(object sender, EventArgs e)
+        {
+            Laporan flaporan = new Laporan();
+            flaporan.Show();
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Transaksi ftransaksi = new Transaksi();
+            ftransaksi.Show();
+            this.Close();
         }
     }
 }
