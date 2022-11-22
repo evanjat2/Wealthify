@@ -114,7 +114,7 @@ BEGIN
 		jenis_kantong = _jenis_kantong,
 		nama_kantong = _nama_kantong,
 		saldo = _saldo
-	where id = _id;
+	where nomor_kantong = _nomor_kantong;
 	if found then
 		return 1;
 	else
