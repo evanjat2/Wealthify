@@ -1,5 +1,7 @@
----- table pengguna ----
-CREATE TABLE IF NOT EXISTS public.pengguna
+CREATE DATABASE wealthify;
+
+-- Tabel Pengguna --
+CREATE TABLE IF NOT EXISTS pengguna
 (
     user_id serial primary key,
     username character varying(50) COLLATE pg_catalog."default" NOT NULL,
@@ -11,7 +13,7 @@ CREATE TABLE IF NOT EXISTS public.pengguna
 )
 
 -- Tabel Artikel --
-CREATE TABLE IF NOT EXISTS public.artikel
+CREATE TABLE IF NOT EXISTS artikel
 (
     artikel_id serial primary key,
     kategori character varying(100) COLLATE pg_catalog."default" NOT NULL,
@@ -19,60 +21,42 @@ CREATE TABLE IF NOT EXISTS public.artikel
     konten character varying COLLATE pg_catalog."default" NOT NULL
 )
 
+-- Sequence Kantong --
+CREATE SEQUENCE seq_kantong
+	start 1
+	increment 1;
 
----- table kantong ----
-
--- DROP TABLE IF EXISTS public.kantong;
-
-CREATE TABLE IF NOT EXISTS public.kantong
+-- Tabel Kantong --
+CREATE TABLE IF NOT EXISTS kantong
 (
-    jenis_kantong character varying(20) COLLATE pg_catalog."default",
-    nama_kantong character varying(20) COLLATE pg_catalog."default",
-    saldo integer,
-    user_id integer,
-    nomor_kantong integer NOT NULL DEFAULT nextval('kantong_nomor_kantong_seq'::regclass),
-    CONSTRAINT kantong_pk PRIMARY KEY (nomor_kantong),
-    CONSTRAINT kantong_fk FOREIGN KEY (user_id)
-        REFERENCES public.pengguna (user_id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+    nomor_kantong integer primary key default nextval('seq_kantong'),
+	jenis_kantong character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    nama_kantong character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    saldo integer default 0
 )
 
-
----- table keuangan ----
-
--- DROP TABLE IF EXISTS public.keuangan;
-
-CREATE TABLE IF NOT EXISTS public.keuangan
+-- Sequence Kantong --
+CREATE SEQUENCE seq_keuangan
+	start 1
+	increment 1;
+	
+-- Tabel Keuangan --
+CREATE TABLE IF NOT EXISTS keuangan
 (
-    jenis_transaksi character varying(50) COLLATE pg_catalog."default",
-    kategori_transaksi character varying(50) COLLATE pg_catalog."default",
-    nominal integer,
-    catatan character varying(50) COLLATE pg_catalog."default",
-    user_id integer,
-    nomor_kantong integer,
-    nomor_transaksi integer NOT NULL DEFAULT nextval('kantong_nomor_kantong_seq'::regclass),
-    nama_kantong character varying(50) COLLATE pg_catalog."default",
-    CONSTRAINT keuangan_pk PRIMARY KEY (nomor_transaksi),
-    CONSTRAINT keuangan_fk1 FOREIGN KEY (user_id)
-        REFERENCES public.pengguna (user_id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID,
-    CONSTRAINT keuangan_fk2 FOREIGN KEY (nomor_kantong)
-        REFERENCES public.kantong (nomor_kantong) MATCH SIMPLE
-        ON UPDATE CASCADE
-        ON DELETE CASCADE
-        NOT VALID
+	nomor_transaksi integer primary key default nextval('seq_keuangan'),
+	nama_kantong character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    jenis_transaksi character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    kategori_transaksi character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    nominal integer NOT NULL,
+    catatan character varying(50) COLLATE pg_catalog."default"
 )
 
-
----- tambah kantong ----
-create FUNCTION tambah_kantong
+-- Function Create Kantong --
+CREATE OR REPLACE FUNCTION tambah_kantong
 (
 	_jenis_kantong character varying,
     _nama_kantong character varying,
-    _saldo int
+    _saldo integer
 )
 returns int AS
 '
@@ -98,14 +82,13 @@ end;
 '
 language plpgsql;
 
-
----- lihat kantong ----
-create FUNCTION lihat_kantong()
+-- Function Read Kantong --
+CREATE OR REPLACE FUNCTION lihat_kantong()
 returns table
 (
 	_jenis_kantong character varying,
     _nama_kantong character varying,
-    _saldo character varying,
+    _saldo integer
 )
 language plpgsql
 as
@@ -116,14 +99,38 @@ BEGIN
 end;
 '
 
+-- Function Update Kantong --
+CREATE OR REPLACE FUNCTION ubah_kantong
+(
+	_nomor_kantong integer,
+	_jenis_kantong character varying,
+	_nama_kantong character varying,
+	_saldo integer
+)
+returns int AS
+'
+BEGIN
+	update kantong set
+		jenis_kantong = _jenis_kantong,
+		nama_kantong = _nama_kantong,
+		saldo = _saldo
+	where id = _id;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;
+end
+'
+language plpgsql
 
----- tambah keuangan ----
-create or replace FUNCTION tambah_keuangan
+-- Function Create Keuangan --
+CREATE OR REPLACE FUNCTION tambah_keuangan
 (
 	_nama_kantong character varying,
 	_jenis_transaksi character varying,
     _kategori_transaksi character varying,
-    _nominal int,
+    _nominal integer,
 	_catatan character varying
 )
 returns int AS
@@ -154,19 +161,21 @@ end;
 '
 language plpgsql;
 
-
----- lihat keuangan ----
-CREATE OR REPLACE FUNCTION public.lihat_keuangan(
-	)
-    RETURNS TABLE(_jenis_transaksi character varying, _kategori_transaksi character varying, _nominal integer, _catatan character varying) 
-    LANGUAGE 'plpgsql'
-    COST 100
-    VOLATILE PARALLEL UNSAFE
-    ROWS 1000
-
-AS $BODY$
+-- Function Read Keuangan --
+CREATE OR REPLACE FUNCTION lihat_keuangan()
+returns table
+(
+	_nama_kantong character varying,
+	_jenis_transaksi character varying,
+	_kategori_transaksi character varying,
+	_nominal integer,
+	_catatan character varying
+)
+language plpgsql
+as
+'
 BEGIN
 	return query
-	select jenis_transaksi, kategori_transaksi, nominal, catatan from keuangan;
+	select nama_kantong, jenis_transaksi, kategori_transaksi, nominal, catatan from keuangan;
 end;
-$BODY$;
+'

@@ -57,41 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB0AAAASCAYAAACnxdXaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAKVJREFUSEvVlFERgzAQRCMBCUiolEpAQh2AAyoBJ0igDsABEtK9u80MP3zudfpm
-        9iObjzeTS1L+nlrrzvSs9EC2IkaeGKIOaeITeXJLD2Rv1wYjaz2QTeF0UsWvcDoz6wBFL4yJbb7GhnQm
-        XHyZx9qO4IMcwjRybjQks+tCqH+7kIyuC+GDtQ5IfiY0UmZ4FQ6sdUCSKzQgap/AxEoPZIOFyxtK+QIo
-        qv6okUA72QAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pbNext.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAALJJREFUSEvFlFENwzAMRANhEAqhEAZhDFYIY9AyaCGUwaAUwiAMgnvn2Gq0n/7U
-        3pNOTa4fT1aUlDNE5ImQwap4IHMpyRFD1Eonq2OBqK8+JVX6VeWfpIvVsUDUIR9ViqxWxwIRJ3Upv0Ng
-        7i5tJ82id/Gm2wrXa3BuOjXBZkGcl9U5QDhVrzJanQOErXy2OgcIH4jf5zdynEk0kP1esc5+xUOZSUnO
-        8+lASDnP/cKJS9kBJuINXPDKfqkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pbPrevious.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAALJJREFUSEvFlFENwzAMRANhEAqhEAZhDFYIY9AyaCGUwaAUwiAMgnvn2Gq0n/7U
-        3pNOTa4fT1aUlDNE5ImQwap4IHMpyRFD1Eonq2OBqK8+JVX6VeWfpIvVsUDUIR9ViqxWxwIRJ3Upv0Ng
-        7i5tJ82id/Gm2wrXa3BuOjXBZkGcl9U5QDhVrzJanQOErXy2OgcIH4jf5zdynEk0kP1esc5+xUOZSUnO
-        8+lASDnP/cKJS9kBJuINXPDKfqkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="pbPrevious.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAALJJREFUSEvFlFENwzAMRANhEAqhEAZhDFYIY9AyaCGUwaAUwiAMgnvn2Gq0n/7U
-        3pNOTa4fT1aUlDNE5ImQwap4IHMpyRFD1Eonq2OBqK8+JVX6VeWfpIvVsUDUIR9ViqxWxwIRJ3Upv0Ng
-        7i5tJ82id/Gm2wrXa3BuOjXBZkGcl9U5QDhVrzJanQOErXy2OgcIH4jf5zdynEk0kP1esc5+xUOZSUnO
-        8+lASDnP/cKJS9kBJuINXPDKfqkAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>
