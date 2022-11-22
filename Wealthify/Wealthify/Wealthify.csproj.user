@@ -7,6 +7,9 @@
     <Compile Update="ArtikelForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ArtikelListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Laporan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,13 +19,13 @@
     <Compile Update="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TambahKantong.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="TambahTransaksi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Transaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UpdateArtikelForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

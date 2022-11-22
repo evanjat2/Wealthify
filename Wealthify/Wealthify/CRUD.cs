@@ -16,7 +16,7 @@ namespace Wealthify
             string port = "Port=5432;";
             string db = "Database=wealthify;";
             string user = "Username=postgres;";
-            string pass = "Password=evan1234;";
+            string pass = "Password=postgres;";
 
             string conString = string.Format("{0}{1}{2}{3}{4}", host, port, db, user,pass);
             return conString;

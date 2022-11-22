@@ -14,7 +14,7 @@ namespace Wealthify
         private DateTime tanggal;
         private string urlArticle;
         private static int index = 0;
-
+        private static string selectedId = "";
         public int ArticleId { get => articleId; }
 
         public string Judul { get => judul; set => judul = value; }
@@ -24,6 +24,8 @@ namespace Wealthify
         public string UrlArticle { get => urlArticle; set => urlArticle = value; }
 
         public static int Index { get => index; set => index = value; }
+
+        public static string SelectedID { get => selectedId; set => selectedId = value; }
 
         public DateTime Tanggal { get => tanggal; set => tanggal = value; }
         

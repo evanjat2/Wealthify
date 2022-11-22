@@ -95,6 +95,8 @@ namespace Wealthify
             CRUD.sql = "SELECT * FROM artikel";
             getArticle(CRUD.sql);
             Artikel.Index = 0;
+            btnAdd.Visible = Pengguna.IsAdmin;
+            btnUpdate.Visible = Pengguna.IsAdmin;
         }
 
         private void pbPrevious_Click(object sender, EventArgs e)
@@ -137,6 +139,13 @@ namespace Wealthify
         {
             AddArticleForm fadd = new AddArticleForm();
             fadd.Show();
+            this.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ArtikelListForm flist = new ArtikelListForm();
+            flist.Show();
             this.Hide();
         }
     }
