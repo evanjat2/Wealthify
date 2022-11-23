@@ -22,4 +22,5 @@
 <summary><h3>Entity Relation Diagram</h3></summary>
 <img src="docs/assets/img/erd.png" class="img-responsive" alt="">
 </details>
-View Github Page : https://evanjat2.github.io/Wealthify/
+Github Page : https://evanjat2.github.io/Wealthify/
+Demo Video : https://drive.google.com/drive/folders/1B0gtgeGvSST65JPO9aMkc385A_G7wVUH
