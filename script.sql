@@ -270,3 +270,21 @@ BEGIN
 end
 '
 language plpgsql
+
+-- Artikel Dummy --
+INSERT INTO artikel (kategori, judul, konten)
+	values(
+		'Lorem 1',
+		'Ipsum 1',
+		'kanoena9fhh9nva9u'
+	),
+	(
+		'Lorem 2',
+		'Ipsum 2',
+		'uaufiuhdfbrajfaiv'
+	),
+	(
+		'Lorem 3',
+		'Ipsum 3',
+		'kewrnq35tha9fhh9nva9u'
+	);
