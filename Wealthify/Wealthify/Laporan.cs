@@ -17,8 +17,9 @@ namespace Wealthify
         {
             InitializeComponent();
         }
+        Kantong kantong;
         private NpgsqlConnection conn;
-        string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=wealthify";
+        string connstring = CRUD.getConnectionString().ToString();
         public DataTable dt;
         public static NpgsqlCommand cmd;
         private string sql = null;
@@ -70,47 +71,37 @@ namespace Wealthify
         {
             try
             {
-                conn.Open();
-                sql = @"select * from tambah_kantong(:_jenis_kantong,:_nama_kantong,:_saldo )";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_jenis_kantong", cbJenisKantong.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_nama_kantong", tbNamaKantong.Text);
-                cmd.Parameters.AddWithValue("_saldo", Convert.ToInt32(tbSaldo.Text));
-                if ((int)cmd.ExecuteScalar() == 1)
+                if (cbJenisKantong.SelectedItem == null || tbNamaKantong.Text == "")
                 {
-                    MessageBox.Show("Kantong telah berhasil ditambahkan", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conn.Close();
-                    cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
+                    MessageBox.Show("Isi data kantong dengan benar", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    kantong = new Kantong(cbJenisKantong.SelectedItem.ToString(), tbNamaKantong.Text, Convert.ToInt32(tbSaldo.Text));
+                    kantong.TambahKantong(kantong);
                     LihatKantong();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
             }
         }
 
         private void btnUbahKantong_Click(object sender, EventArgs e)
         {
-            if (r == null)
-            {
-                MessageBox.Show("Pilih baris kantong yang ingin diedit", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
             try
             {
-                conn.Open();
-                sql = @"select * from ubah_kantong(:_nomor_kantong,:_jenis_kantong,:_nama_kantong,:_saldo)";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_nomor_kantong", r.Cells["_nomor_kantong"].Value);
-                cmd.Parameters.AddWithValue("_jenis_kantong", cbJenisKantong.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_nama_kantong", tbNamaKantong.Text);
-                cmd.Parameters.AddWithValue("_saldo", Convert.ToInt32(tbSaldo.Text));
-                if ((int)cmd.ExecuteScalar() == 1)
+                if (r == null)
                 {
-                    MessageBox.Show("Kantong telah berhasil diubah", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conn.Close();
+                    MessageBox.Show("Pilih baris kantong yang ingin diedit", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    kantong = new Kantong(Convert.ToInt32(r.Cells["_nomor_kantong"].Value), cbJenisKantong.SelectedItem.ToString(),
+                        tbNamaKantong.Text, Convert.ToInt32(tbSaldo.Text));
+                    kantong.UbahKantong(kantong);
                     cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
                     LihatKantong();
                 }
@@ -124,35 +115,26 @@ namespace Wealthify
 
         private void btnHapusKantong_Click(object sender, EventArgs e)
         {
-            if (r == null)
+            try
             {
-                MessageBox.Show("Pilih baris kantong yang ingin dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                if (r == null)
+                {
+                    MessageBox.Show("Pilih baris kantong yang ingin dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (MessageBox.Show("Apakah anda ingin menghapus kantong " + r.Cells["_nomor_kantong"].Value.ToString() + "?", "Hapus kantong",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    kantong = new Kantong(Convert.ToInt32(r.Cells["_nomor_kantong"].Value));
+                    kantong.HapusKantong(kantong);
+                    cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
+                    LihatKantong();
+                }
             }
-            if (MessageBox.Show("Apakah anda ingin menghapus kantong " + r.Cells["_nomor_kantong"].Value.ToString() + "?", "Hapus kantong",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            catch (Exception ex)
             {
-                try
-                {
-                    conn.Open();
-                    sql = @"select * from hapus_kantong(:_nomor_kantong)";
-                    cmd = new NpgsqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("_nomor_kantong", r.Cells["_nomor_kantong"].Value);
-                    if ((int)cmd.ExecuteScalar() == 1)
-                    {
-                        MessageBox.Show("Kantong telah berhasil dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conn.Close();
-                        LihatKantong();
-                        cbJenisKantong.SelectedItem = tbNamaKantong.Text = tbSaldo.Text = null;
-                        r = null;
-                    }
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    conn.Close();
-                }
+                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
             }
         }
 

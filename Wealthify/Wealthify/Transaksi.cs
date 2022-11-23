@@ -17,6 +17,7 @@ namespace Wealthify
         {
             InitializeComponent();
         }
+        Keuangan keuangan;
         private NpgsqlConnection conn;
         string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=wealthify";
         public DataTable dt;
@@ -26,7 +27,7 @@ namespace Wealthify
 
         private void Transaksi_Load(object sender, EventArgs e)
         {
-            LihatTransaksi();
+            LihatKeuangan();
             conn.Open();
             cbKantong.DataSource = null;
             sql = @"select nama_kantong from kantong";
@@ -42,7 +43,7 @@ namespace Wealthify
             conn.Close();
         }
 
-        public void LihatTransaksi()
+        public void LihatKeuangan()
         {
             conn = new NpgsqlConnection(connstring);
             conn.Open();
@@ -73,62 +74,44 @@ namespace Wealthify
         {
             try
             {
-                conn.Open();
-                sql = @"select * from tambah_keuangan(:_nama_kantong,:_jenis_transaksi,:_kategori_transaksi,:_tanggal,:_nominal,:_catatan )";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_nama_kantong", cbKantong.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_jenis_transaksi", cbJenisTransaksi.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_kategori_transaksi", cbKategoriTransaksi.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_tanggal", dtpTanggalTransaksi.Text);
-                cmd.Parameters.AddWithValue("_nominal", Convert.ToInt32(tbNominal.Text));
-                cmd.Parameters.AddWithValue("_catatan", tbCatatan.Text);
-                if ((int)cmd.ExecuteScalar() == 1)
+                if (cbKantong.SelectedItem == null || cbJenisTransaksi.SelectedItem == null ||
+                    cbKategoriTransaksi.SelectedItem == null || dtpTanggalTransaksi.Text == "" || tbNominal.Text == "")
                 {
-                    MessageBox.Show("Transaksi telah berhasil ditambahkan", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    /*sql = @"select sum(nominal) as total from keuangan where nama_kantong = '" + cbKantong.SelectedItem.ToString() + "' and jenis_transaksi = 'Pemasukan'";
-                    sql = @"select * from ubah_kantong(:_nomor_kantong,:_jenis_kantong,:_nama_kantong,:_saldo) where _nama_kantong = '" + cbKantong.SelectedItem.ToString() + "'";
-                    cmd = new NpgsqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("_nomor_kantong", "_nomor_kantong");
-                    cmd.Parameters.AddWithValue("_jenis_kantong", "_jenis_kantong");
-                    cmd.Parameters.AddWithValue("_nama_kantong", "_nama_kantong");
-                    cmd.Parameters.AddWithValue("_saldo", "_saldo" + Convert.ToInt32(tbNominal.Text));*/
-                    conn.Close();
-                    cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
-                    LihatTransaksi();
+                    MessageBox.Show("Isi data transaksi dengan benar", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    keuangan = new Keuangan(cbKantong.SelectedItem.ToString(), cbJenisTransaksi.SelectedItem.ToString(),
+                        cbKategoriTransaksi.SelectedItem.ToString(), dtpTanggalTransaksi.Text, Convert.ToInt32(tbNominal.Text), tbCatatan.Text);
+                    keuangan.TambahKeuangan(keuangan);
+                    LihatKeuangan();
+                    /*keuangan = new Keuangan(cbKantong.SelectedItem.ToString(), Convert.ToInt32(tbNominal.Text));
+                    keuangan.UbahSaldoKantong(keuangan);*/
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                conn.Close();
             }
         }
 
         private void btnUbahTransaksi_Click(object sender, EventArgs e)
         {
-            if (r == null)
-            {
-                MessageBox.Show("Pilih baris transaksi yang ingin diedit", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
             try
             {
-                conn.Open();
-                sql = @"select * from ubah_keuangan(:_nomor_transaksi,:_nama_kantong,:_jenis_transaksi,:_kategori_transaksi,:_tanggal,:_nominal,:_catatan)";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("_nomor_transaksi", r.Cells["_nomor_transaksi"].Value);
-                cmd.Parameters.AddWithValue("_nama_kantong", cbKantong.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_jenis_transaksi", cbJenisTransaksi.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_kategori_transaksi", cbKategoriTransaksi.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("_tanggal", dtpTanggalTransaksi.Text);
-                cmd.Parameters.AddWithValue("_nominal", Convert.ToInt32(tbNominal.Text));
-                cmd.Parameters.AddWithValue("_catatan", tbCatatan.Text);
-                if ((int)cmd.ExecuteScalar() == 1)
+                if (r == null)
                 {
-                    MessageBox.Show("Transaksi telah berhasil diubah", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    conn.Close();
+                    MessageBox.Show("Pilih baris transaksi yang ingin diedit", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    keuangan = new Keuangan(Convert.ToInt32(r.Cells["_nomor_transaksi"].Value), cbKantong.SelectedItem.ToString(),
+                        cbJenisTransaksi.SelectedItem.ToString(), cbKategoriTransaksi.SelectedItem.ToString(), dtpTanggalTransaksi.ToString(),
+                        Convert.ToInt32(tbNominal.Text), tbCatatan.Text);
+                    keuangan.UbahKeuangan(keuangan);
                     cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
-                    LihatTransaksi();
+                    LihatKeuangan();
                 }
             }
             catch (Exception ex)
@@ -140,40 +123,31 @@ namespace Wealthify
 
         private void btnHapusTransaksi_Click(object sender, EventArgs e)
         {
-            if (r == null)
+            try
             {
-                MessageBox.Show("Pilih baris transaksi yang ingin dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (MessageBox.Show("Apakah anda ingin menghapus transaksi " + r.Cells["_nomor_transaksi"].Value.ToString() +"?", "Hapus transaksi",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-            {
-                try
+                if (r == null)
                 {
-                    conn.Open();
-                    sql = @"select * from hapus_keuangan(:_nomor_transaksi)";
-                    cmd = new NpgsqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("_nomor_transaksi", r.Cells["_nomor_transaksi"].Value);
-                    if ((int)cmd.ExecuteScalar() == 1)
-                    {
-                        MessageBox.Show("Transaksi telah berhasil dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        conn.Close();
-                        LihatTransaksi();
-                        cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
-                        r = null;
-                    }
+                    MessageBox.Show("Pilih baris transaksi yang ingin dihapus", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
-                catch (Exception ex)
+                if (MessageBox.Show("Apakah anda ingin menghapus transaksi " + r.Cells["_nomor_transaksi"].Value.ToString() + "?", "Hapus transaksi",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    conn.Close();
+                    keuangan = new Keuangan(Convert.ToInt32(r.Cells["_nomor_transaksi"].Value));
+                    keuangan.HapusKeuangan(keuangan);
+                    cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
+                    LihatKeuangan();
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();            }
         }
 
         private void btnTampilTransaksi_Click(object sender, EventArgs e)
         {
-            LihatTransaksi();
+            LihatKeuangan();
         }
 
         private void cbJenisTransaksi_SelectedIndexChanged(object sender, EventArgs e)

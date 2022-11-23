@@ -47,9 +47,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.btnTambahKantong = new System.Windows.Forms.Button();
@@ -273,38 +270,6 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "Statistik Keuangan";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(745, 300);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(311, 25);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Target Tabungan : Rp 1.000.000";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(745, 336);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(176, 25);
-            this.label21.TabIndex = 25;
-            this.label21.Text = "2% menuju target";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(745, 371);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(338, 50);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "Perkiraan : 1 tahun 234 hari untuk \r\nmenuju target";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -465,9 +430,6 @@
             this.Controls.Add(this.btnTambahKantong);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -508,9 +470,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private Label label15;
-        private Label label20;
-        private Label label21;
-        private Label label22;
         private Label label23;
         private Label label24;
         private Button btnTambahKantong;

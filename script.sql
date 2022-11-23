@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS kantong
 CREATE SEQUENCE seq_keuangan
 	start 1
 	increment 1;
-	
+
 -- Tabel Keuangan --
 CREATE TABLE IF NOT EXISTS keuangan
 (
@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS keuangan
 	nama_kantong character varying(50) COLLATE pg_catalog."default" NOT NULL,
     jenis_transaksi character varying(50) COLLATE pg_catalog."default" NOT NULL,
     kategori_transaksi character varying(50) COLLATE pg_catalog."default" NOT NULL,
+	tanggal character varying(200) NOT NULL,
     nominal integer NOT NULL,
     catatan character varying(50) COLLATE pg_catalog."default"
 )
@@ -125,12 +126,29 @@ end
 '
 language plpgsql
 
+-- Function Delete Kantong --
+CREATE OR REPLACE FUNCTION hapus_kantong(_nomor_kantong integer)
+returns int AS
+'
+BEGIN
+	delete from kantong
+	where nomor_kantong = _nomor_kantong;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;
+end
+'
+language plpgsql
+
 -- Function Create Keuangan --
 CREATE OR REPLACE FUNCTION tambah_keuangan
 (
 	_nama_kantong character varying,
 	_jenis_transaksi character varying,
     _kategori_transaksi character varying,
+	_tanggal character varying,
     _nominal integer,
 	_catatan character varying
 )
@@ -142,6 +160,7 @@ BEGIN
 		nama_kantong,
 		jenis_transaksi,
 		kategori_transaksi,
+		tanggal,
 		nominal,
 		catatan
 	)
@@ -150,6 +169,7 @@ BEGIN
 		_nama_kantong,
 		_jenis_transaksi,
     	_kategori_transaksi,
+		_tanggal,
     	_nominal,
 		_catatan
 	);
@@ -170,6 +190,7 @@ returns table
 	_nama_kantong character varying,
 	_jenis_transaksi character varying,
 	_kategori_transaksi character varying,
+	_tanggal character varying,
 	_nominal integer,
 	_catatan character varying
 )
@@ -178,7 +199,53 @@ as
 '
 BEGIN
 	return query
-	select nomor_transaksi, nama_kantong, jenis_transaksi, kategori_transaksi, nominal, catatan from keuangan;
+	select nomor_transaksi, nama_kantong, jenis_transaksi, kategori_transaksi, tanggal, nominal, catatan from keuangan;
 end;
 '
 
+-- Function Update Keuangan --
+CREATE OR REPLACE FUNCTION ubah_keuangan
+(
+	_nomor_transaksi integer,
+	_nama_kantong character varying,
+	_jenis_transaksi character varying,
+	_kategori_transaksi character varying,
+	_tanggal character varying,
+	_nominal integer,
+	_catatan character varying
+)
+returns int AS
+'
+BEGIN
+	update keuangan set
+		nama_kantong = _nama_kantong,
+		jenis_transaksi = _jenis_transaksi,
+		kategori_transaksi = _kategori_transaksi,
+		tanggal = _tanggal,
+		nominal = _nominal,
+		catatan = _catatan
+	where nomor_transaksi = _nomor_transaksi;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;
+end
+'
+language plpgsql
+
+-- Function Delete Keuangan --
+CREATE OR REPLACE FUNCTION hapus_keuangan(_nomor_transaksi integer)
+returns int AS
+'
+BEGIN
+	delete from keuangan
+	where nomor_transaksi = _nomor_transaksi;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;
+end
+'
+language plpgsql

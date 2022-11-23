@@ -10,7 +10,7 @@ namespace Wealthify
 {
     class CRUD
     {
-        private static string getConnectionString()
+        public static string getConnectionString()
         {
             string host = "Host=localhost;";
             string port = "Port=5432;";
