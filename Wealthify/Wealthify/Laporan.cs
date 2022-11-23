@@ -18,6 +18,7 @@ namespace Wealthify
             InitializeComponent();
         }
         Kantong kantong;
+        Keuangan keuangan;
         private NpgsqlConnection conn;
         string connstring = CRUD.getConnectionString().ToString();
         public DataTable dt;
@@ -79,6 +80,9 @@ namespace Wealthify
                 {
                     kantong = new Kantong(cbJenisKantong.SelectedItem.ToString(), tbNamaKantong.Text, Convert.ToInt32(tbSaldo.Text));
                     kantong.TambahKantong(kantong);
+                    keuangan = new Keuangan(tbNamaKantong.Text, "Pemasukan",
+                        "Saldo Awal", DateTime.Now.ToString(), Convert.ToInt32(tbSaldo.Text), "");
+                    keuangan.TambahKeuangan(keuangan);
                     LihatKantong();
                 }
             }

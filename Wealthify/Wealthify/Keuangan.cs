@@ -18,9 +18,8 @@ namespace Wealthify
         private string _tanggal;
         private int _nominal;
         private string _catatan;
-        public int PerubahanSaldo = 0;
         private NpgsqlConnection conn;
-        string connstring = CRUD.getConnectionString().ToString();
+        public string connstring = CRUD.getConnectionString().ToString();
         public DataTable dt;
         private static NpgsqlCommand cmd;
         private string sql = null;
@@ -30,6 +29,12 @@ namespace Wealthify
         public int Nomor
         {
             get { return _nomor_transaksi; }
+        }
+
+        public string Nama
+        {
+            get { return _nama_kantong; }
+            set { _nama_kantong = value; }
         }
 
         public string Jenis
@@ -94,6 +99,7 @@ namespace Wealthify
 
         public void TambahKeuangan(Keuangan keuangan)
         {
+            int PerubahanSaldo = 0;
             try
             {
                 conn = new NpgsqlConnection(connstring);
@@ -117,10 +123,13 @@ namespace Wealthify
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            PerubahanSaldo = TotalSaldoKantong(_nama_kantong);
+            UbahSaldoKantong(_nama_kantong, PerubahanSaldo);
         }
 
         public void UbahKeuangan(Keuangan keuangan)
         {
+            int PerubahanSaldo = 0;
             try
             {
                 conn = new NpgsqlConnection(connstring);
@@ -145,10 +154,13 @@ namespace Wealthify
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            PerubahanSaldo = TotalSaldoKantong(_nama_kantong);
+            UbahSaldoKantong(_nama_kantong, PerubahanSaldo);
         }
 
         public void HapusKeuangan(Keuangan keuangan)
         {
+            int PerubahanSaldo = 0;
             try
             {
                 conn = new NpgsqlConnection(connstring);
@@ -168,6 +180,9 @@ namespace Wealthify
                 MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
+            _nama_kantong += 
+            PerubahanSaldo = TotalSaldoKantong(_nama_kantong);
+            UbahSaldoKantong(_nama_kantong, PerubahanSaldo);
         }
 
         public void UbahSaldoKantong(string NamaKantong, int Saldo)
@@ -194,50 +209,50 @@ namespace Wealthify
             }
         }
 
-        public void TotalSaldoKantong(string NamaKantong)
+        public static int TotalSaldoKantong(string NamaKantong)
         {
+            NpgsqlConnection conn = new NpgsqlConnection(CRUD.getConnectionString().ToString());
+            int TotalSaldo = 0;
             int Pemasukan = 0;
             int Pengeluaran = 0;
             try
             {
-                conn = new NpgsqlConnection(connstring);
+                
                 conn.Open();
-                sql = "select sum(nominal) as perubahan_saldo from keuangan where nama_kantong = '"
+                string sql = "select sum(nominal) as perubahan_saldo from keuangan where nama_kantong = '"
                     + NamaKantong + "' " + "and jenis_transaksi = 'Pemasukan'";
                 cmd = new NpgsqlCommand(sql, conn);
                 NpgsqlDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    Pemasukan = int.Parse(rd["nominal"].ToString());
+                    Pemasukan = Convert.ToInt32(rd["perubahan_saldo"].ToString());
                 }
                 conn.Close();
             }
-            catch (Exception ex)
+            catch
             {
-                conn = new NpgsqlConnection(connstring);
-                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
 
             try
             {
                 conn.Open();
-                sql = "select sum(nominal) as perubahan_saldo from keuangan where nama_kantong = '"
+                string sql = "select sum(nominal) as perubahan_saldo from keuangan " + "where nama_kantong = '"
                     + NamaKantong + "' " + "and jenis_transaksi = 'Pengeluaran'";
                 cmd = new NpgsqlCommand(sql, conn);
                 NpgsqlDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {
-                    Pengeluaran = int.Parse(rd["nominal"].ToString());
+                    Pengeluaran = Convert.ToInt32(rd["perubahan_saldo"].ToString());
                 }
                 conn.Close();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error:" + ex.Message, "FAIL!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conn.Close();
             }
-            PerubahanSaldo = Pemasukan - Pengeluaran;
+            TotalSaldo += Pemasukan - Pengeluaran;
+            return TotalSaldo;
         }
     }
 }
