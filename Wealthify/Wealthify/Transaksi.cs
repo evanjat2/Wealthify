@@ -107,7 +107,7 @@ namespace Wealthify
                 else
                 {
                     keuangan = new Keuangan(Convert.ToInt32(r.Cells["_nomor_transaksi"].Value), cbKantong.SelectedItem.ToString(),
-                        cbJenisTransaksi.SelectedItem.ToString(), cbKategoriTransaksi.SelectedItem.ToString(), dtpTanggalTransaksi.ToString(),
+                        cbJenisTransaksi.SelectedItem.ToString(), cbKategoriTransaksi.SelectedItem.ToString(), dtpTanggalTransaksi.Text,
                         Convert.ToInt32(tbNominal.Text), tbCatatan.Text);
                     keuangan.UbahKeuangan(keuangan);
                     cbKantong.SelectedItem = tbNominal.Text = tbCatatan.Text = null;
