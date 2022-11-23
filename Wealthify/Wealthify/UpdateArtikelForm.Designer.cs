@@ -36,6 +36,7 @@
             this.lblContent = new System.Windows.Forms.Label();
             this.lblJudul = new System.Windows.Forms.Label();
             this.lblKategori = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnKembali
@@ -43,7 +44,7 @@
             this.btnKembali.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnKembali.ForeColor = System.Drawing.Color.White;
-            this.btnKembali.Location = new System.Drawing.Point(1362, 890);
+            this.btnKembali.Location = new System.Drawing.Point(1197, 890);
             this.btnKembali.Name = "btnKembali";
             this.btnKembali.Size = new System.Drawing.Size(169, 47);
             this.btnKembali.TabIndex = 18;
@@ -122,11 +123,25 @@
             this.lblKategori.TabIndex = 11;
             this.lblKategori.Text = "Kategori";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(1372, 890);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 47);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Delete Artikel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UpdateArtikelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1806, 1050);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.tbContent);
@@ -153,5 +168,6 @@
         private Label lblContent;
         private Label lblJudul;
         private Label lblKategori;
+        private Button button1;
     }
 }

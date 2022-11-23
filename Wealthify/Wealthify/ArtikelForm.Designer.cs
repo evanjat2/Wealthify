@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArtikelForm));
             this.pnl = new System.Windows.Forms.Panel();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.lblKategori3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.lblLogout = new System.Windows.Forms.Label();
             this.pnl.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -105,6 +105,18 @@
             this.pnl.Size = new System.Drawing.Size(436, 1050);
             this.pnl.TabIndex = 1;
             // 
+            // lblLogout
+            // 
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.lblLogout.Location = new System.Drawing.Point(148, 841);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(112, 32);
+            this.lblLogout.TabIndex = 7;
+            this.lblLogout.Text = "LOG OUT";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -135,9 +147,9 @@
             this.label1.Location = new System.Drawing.Point(140, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 29);
+            this.label1.Size = new System.Drawing.Size(90, 29);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Transaksi";
+            this.label1.Text = "Artikel";
             // 
             // lblAdmin
             // 
@@ -517,18 +529,6 @@
             this.btnUpdate.Text = "Update Article";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // lblLogout
-            // 
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblLogout.Location = new System.Drawing.Point(148, 841);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(112, 32);
-            this.lblLogout.TabIndex = 7;
-            this.lblLogout.Text = "LOG OUT";
-            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
             // 
             // ArtikelForm
             // 

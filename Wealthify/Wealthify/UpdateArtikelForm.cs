@@ -22,7 +22,7 @@ namespace Wealthify
 
         private void addParameters(string param)
         {
-            if(param == "load")
+            if(param == "load" || param == "delete")
             {
                 CRUD.cmd.Parameters.Clear();
                 CRUD.cmd.Parameters.AddWithValue("artikel_id", int.Parse(Artikel.SelectedID));
@@ -59,9 +59,6 @@ namespace Wealthify
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
-
-
             try
             {
                 CRUD.sql = "UPDATE artikel SET kategori = @kategori , judul=@judul, konten = @konten WHERE artikel_id = @artikel_id";
@@ -76,6 +73,26 @@ namespace Wealthify
                 MessageBox.Show("An error occured: " + ex.Message, "Gagal Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CRUD.sql = "DELETE from artikel WHERE artikel_id = @artikel_id;";
+                CRUD.cmd = new NpgsqlCommand(CRUD.sql, CRUD.con);
+                addParameters("delete");
+                CRUD.PerformCrud(CRUD.cmd);
+                MessageBox.Show("Berhasil Menghapus Artikel", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ArtikelListForm flistartikel = new ArtikelListForm();
+                flistartikel.Show();
+                this.Close();
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured: " + ex.Message, "Gagal Update", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
