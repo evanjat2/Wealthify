@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArtikelForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +65,8 @@
             this.lblKategori3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.pnl.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -79,29 +80,30 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnl
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lblAdmin);
-            this.panel1.Controls.Add(this.lblKeluar);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.lblLaporan);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnArtikel);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(436, 1050);
-            this.panel1.TabIndex = 1;
+            this.pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
+            this.pnl.Controls.Add(this.lblLogout);
+            this.pnl.Controls.Add(this.panel2);
+            this.pnl.Controls.Add(this.lblAdmin);
+            this.pnl.Controls.Add(this.lblKeluar);
+            this.pnl.Controls.Add(this.pictureBox4);
+            this.pnl.Controls.Add(this.pictureBox3);
+            this.pnl.Controls.Add(this.pictureBox2);
+            this.pnl.Controls.Add(this.label5);
+            this.pnl.Controls.Add(this.lblLaporan);
+            this.pnl.Controls.Add(this.label3);
+            this.pnl.Controls.Add(this.lblEmail);
+            this.pnl.Controls.Add(this.lblName);
+            this.pnl.Controls.Add(this.pictureBox1);
+            this.pnl.Controls.Add(this.btnArtikel);
+            this.pnl.Controls.Add(this.button1);
+            this.pnl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl.Location = new System.Drawing.Point(0, 0);
+            this.pnl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnl.Name = "pnl";
+            this.pnl.Size = new System.Drawing.Size(436, 1050);
+            this.pnl.TabIndex = 1;
             // 
             // panel2
             // 
@@ -516,6 +518,18 @@
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // lblLogout
+            // 
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.lblLogout.Location = new System.Drawing.Point(148, 841);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(112, 32);
+            this.lblLogout.TabIndex = 7;
+            this.lblLogout.Text = "LOG OUT";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
             // ArtikelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -527,12 +541,12 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pbAfter);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl);
             this.Name = "ArtikelForm";
             this.Text = "ArtikelForm";
             this.Load += new System.EventHandler(this.ArtikelForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnl.ResumeLayout(false);
+            this.pnl.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -554,7 +568,7 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnl;
         private Label lblAdmin;
         private Label lblKeluar;
         private PictureBox pictureBox4;
@@ -590,5 +604,6 @@
         private Panel panel2;
         private PictureBox pictureBox5;
         private Label label1;
+        private Label lblLogout;
     }
 }

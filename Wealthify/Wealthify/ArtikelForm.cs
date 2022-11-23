@@ -201,5 +201,13 @@ namespace Wealthify
             ftransaksi.Show();
             this.Close();
         }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            Login flogin = new Login();
+            flogin.Show();
+            this.Close();
+            Pengguna.Logout();
+        }
     }
 }

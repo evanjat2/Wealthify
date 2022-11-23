@@ -38,6 +38,14 @@ namespace Wealthify
             return false;
         }
 
+        public static void Logout()
+        {
+            email = "";
+            name = "";
+            userID = 0;
+            isAdmin = false;
+        }
+
         public Boolean SignUp(string username, string password, string name)
         {
             return false;
