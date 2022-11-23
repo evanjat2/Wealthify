@@ -126,6 +126,27 @@ end
 '
 language plpgsql
 
+-- Function Update Saldo Kantong --
+CREATE OR REPLACE FUNCTION ubah_saldo_kantong
+(
+	_nama_kantong character varying,
+	_saldo integer
+)
+returns int AS
+'
+BEGIN
+	update kantong set
+		saldo = _saldo
+	where nama_kantong = _nama_kantong;
+	if found then
+		return 1;
+	else
+		return 0;
+	end if;
+end
+'
+language plpgsql
+
 -- Function Delete Kantong --
 CREATE OR REPLACE FUNCTION hapus_kantong(_nomor_kantong integer)
 returns int AS
