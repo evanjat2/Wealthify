@@ -185,5 +185,12 @@ namespace Wealthify
                 tbCatatan.Text = r.Cells["_catatan"].Value.ToString();
             }
         }
+
+        private void btnArtikel_Click(object sender, EventArgs e)
+        {
+            ArtikelForm fArtikel = new ArtikelForm();
+            fArtikel.Show();
+            this.Hide();
+        }
     }
 }

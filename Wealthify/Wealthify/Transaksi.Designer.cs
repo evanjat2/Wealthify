@@ -194,6 +194,7 @@
             this.btnArtikel.Size = new System.Drawing.Size(305, 62);
             this.btnArtikel.TabIndex = 33;
             this.btnArtikel.UseVisualStyleBackColor = false;
+            this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);
             // 
             // panel2
             // 

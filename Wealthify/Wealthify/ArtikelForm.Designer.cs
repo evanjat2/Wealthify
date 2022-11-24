@@ -100,9 +100,8 @@
             this.pnl.Controls.Add(this.button1);
             this.pnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl.Location = new System.Drawing.Point(0, 0);
-            this.pnl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(436, 1050);
+            this.pnl.Size = new System.Drawing.Size(305, 449);
             this.pnl.TabIndex = 1;
             // 
             // lblLogout
@@ -110,9 +109,10 @@
             this.lblLogout.AutoSize = true;
             this.lblLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblLogout.Location = new System.Drawing.Point(148, 841);
+            this.lblLogout.Location = new System.Drawing.Point(104, 505);
+            this.lblLogout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(112, 32);
+            this.lblLogout.Size = new System.Drawing.Size(75, 21);
             this.lblLogout.TabIndex = 7;
             this.lblLogout.Text = "LOG OUT";
             this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
@@ -122,20 +122,18 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 689);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 413);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(436, 103);
+            this.panel2.Size = new System.Drawing.Size(305, 62);
             this.panel2.TabIndex = 38;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Wealthify.Properties.Resources.transaksi;
-            this.pictureBox5.Location = new System.Drawing.Point(57, 20);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(40, 12);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(53, 67);
+            this.pictureBox5.Size = new System.Drawing.Size(37, 40);
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
@@ -144,20 +142,21 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(140, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(98, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 29);
+            this.label1.Size = new System.Drawing.Size(57, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Artikel";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblAdmin
             // 
             this.lblAdmin.AutoSize = true;
             this.lblAdmin.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAdmin.Location = new System.Drawing.Point(180, 320);
+            this.lblAdmin.Location = new System.Drawing.Point(126, 192);
+            this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(83, 29);
+            this.lblAdmin.Size = new System.Drawing.Size(55, 19);
             this.lblAdmin.TabIndex = 30;
             this.lblAdmin.Text = "Admin";
             // 
@@ -165,10 +164,9 @@
             // 
             this.lblKeluar.AutoSize = true;
             this.lblKeluar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblKeluar.Location = new System.Drawing.Point(174, 1100);
-            this.lblKeluar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKeluar.Location = new System.Drawing.Point(122, 660);
             this.lblKeluar.Name = "lblKeluar";
-            this.lblKeluar.Size = new System.Drawing.Size(87, 29);
+            this.lblKeluar.Size = new System.Drawing.Size(56, 19);
             this.lblKeluar.TabIndex = 10;
             this.lblKeluar.Text = "Keluar";
             // 
@@ -176,10 +174,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::Wealthify.Properties.Resources.artikel;
-            this.pictureBox4.Location = new System.Drawing.Point(57, 702);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(40, 421);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 44);
+            this.pictureBox4.Size = new System.Drawing.Size(25, 26);
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
@@ -187,20 +184,18 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.pictureBox3.Image = global::Wealthify.Properties.Resources.laporan;
-            this.pictureBox3.Location = new System.Drawing.Point(57, 597);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(40, 358);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 67);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 40);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Wealthify.Properties.Resources.transaksi;
-            this.pictureBox2.Location = new System.Drawing.Point(57, 488);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 293);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 67);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 40);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
@@ -209,10 +204,9 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(140, 717);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(98, 430);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 29);
+            this.label5.Size = new System.Drawing.Size(57, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "Artikel";
             // 
@@ -221,10 +215,9 @@
             this.lblLaporan.AutoSize = true;
             this.lblLaporan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.lblLaporan.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLaporan.Location = new System.Drawing.Point(140, 612);
-            this.lblLaporan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLaporan.Location = new System.Drawing.Point(98, 367);
             this.lblLaporan.Name = "lblLaporan";
-            this.lblLaporan.Size = new System.Drawing.Size(107, 29);
+            this.lblLaporan.Size = new System.Drawing.Size(69, 19);
             this.lblLaporan.TabIndex = 5;
             this.lblLaporan.Text = "Laporan";
             this.lblLaporan.Click += new System.EventHandler(this.lblLaporan_Click);
@@ -233,10 +226,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(140, 508);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(98, 305);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 29);
+            this.label3.Size = new System.Drawing.Size(80, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Transaksi";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -245,10 +237,9 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.Location = new System.Drawing.Point(97, 397);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(68, 238);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(260, 29);
+            this.lblEmail.Size = new System.Drawing.Size(163, 19);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "jekicihuy@gmail.com";
             // 
@@ -256,10 +247,9 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(107, 352);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(75, 211);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(230, 38);
+            this.lblName.Size = new System.Drawing.Size(146, 25);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Jeki Davidson";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,10 +257,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Wealthify.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 158);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 146);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 139);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -280,10 +269,9 @@
             this.btnArtikel.FlatAppearance.BorderSize = 0;
             this.btnArtikel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(90)))));
             this.btnArtikel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArtikel.Location = new System.Drawing.Point(-1, 576);
-            this.btnArtikel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnArtikel.Location = new System.Drawing.Point(-1, 346);
             this.btnArtikel.Name = "btnArtikel";
-            this.btnArtikel.Size = new System.Drawing.Size(436, 103);
+            this.btnArtikel.Size = new System.Drawing.Size(305, 62);
             this.btnArtikel.TabIndex = 36;
             this.btnArtikel.UseVisualStyleBackColor = false;
             this.btnArtikel.Click += new System.EventHandler(this.btnArtikel_Click);
@@ -294,10 +282,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(90)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 474);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(0, 284);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(436, 103);
+            this.button1.Size = new System.Drawing.Size(305, 62);
             this.button1.TabIndex = 37;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -311,9 +298,10 @@
             this.pbAfter.Controls.Add(this.lblKonten1);
             this.pbAfter.Controls.Add(this.lblJudul1);
             this.pbAfter.Controls.Add(this.lblKategori1);
-            this.pbAfter.Location = new System.Drawing.Point(475, 116);
+            this.pbAfter.Location = new System.Drawing.Point(332, 70);
+            this.pbAfter.Margin = new System.Windows.Forms.Padding(2);
             this.pbAfter.Name = "pbAfter";
-            this.pbAfter.Size = new System.Drawing.Size(1414, 502);
+            this.pbAfter.Size = new System.Drawing.Size(990, 301);
             this.pbAfter.TabIndex = 2;
             this.pbAfter.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -321,9 +309,10 @@
             // 
             this.lblRead1.AutoSize = true;
             this.lblRead1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblRead1.Location = new System.Drawing.Point(1278, 453);
+            this.lblRead1.Location = new System.Drawing.Point(895, 272);
+            this.lblRead1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRead1.Name = "lblRead1";
-            this.lblRead1.Size = new System.Drawing.Size(115, 25);
+            this.lblRead1.Size = new System.Drawing.Size(76, 15);
             this.lblRead1.TabIndex = 6;
             this.lblRead1.Text = "Read More ...";
             this.lblRead1.Click += new System.EventHandler(this.lblRead1_Click);
@@ -333,9 +322,10 @@
             this.pbNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
             this.pbNext.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbNext.InitialImage")));
-            this.pbNext.Location = new System.Drawing.Point(1343, 236);
+            this.pbNext.Location = new System.Drawing.Point(940, 142);
+            this.pbNext.Margin = new System.Windows.Forms.Padding(2);
             this.pbNext.Name = "pbNext";
-            this.pbNext.Size = new System.Drawing.Size(50, 36);
+            this.pbNext.Size = new System.Drawing.Size(35, 22);
             this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNext.TabIndex = 5;
             this.pbNext.TabStop = false;
@@ -346,9 +336,10 @@
             this.pbPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.pbPrevious.Image = ((System.Drawing.Image)(resources.GetObject("pbPrevious.Image")));
             this.pbPrevious.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbPrevious.InitialImage")));
-            this.pbPrevious.Location = new System.Drawing.Point(14, 236);
+            this.pbPrevious.Location = new System.Drawing.Point(10, 142);
+            this.pbPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.pbPrevious.Name = "pbPrevious";
-            this.pbPrevious.Size = new System.Drawing.Size(50, 36);
+            this.pbPrevious.Size = new System.Drawing.Size(35, 22);
             this.pbPrevious.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPrevious.TabIndex = 0;
             this.pbPrevious.TabStop = false;
@@ -358,10 +349,11 @@
             // 
             this.lblKonten1.AutoSize = true;
             this.lblKonten1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKonten1.Location = new System.Drawing.Point(69, 317);
-            this.lblKonten1.MaximumSize = new System.Drawing.Size(1300, 150);
+            this.lblKonten1.Location = new System.Drawing.Point(48, 190);
+            this.lblKonten1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKonten1.MaximumSize = new System.Drawing.Size(910, 90);
             this.lblKonten1.Name = "lblKonten1";
-            this.lblKonten1.Size = new System.Drawing.Size(1039, 38);
+            this.lblKonten1.Size = new System.Drawing.Size(703, 25);
             this.lblKonten1.TabIndex = 4;
             this.lblKonten1.Text = "Lorem ipsum dol amet, consecte adipisicing elit sed do. some dsu text will be her" +
     "e.";
@@ -370,10 +362,11 @@
             // 
             this.lblJudul1.AutoSize = true;
             this.lblJudul1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul1.Location = new System.Drawing.Point(59, 108);
-            this.lblJudul1.MaximumSize = new System.Drawing.Size(1300, 200);
+            this.lblJudul1.Location = new System.Drawing.Point(41, 65);
+            this.lblJudul1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJudul1.MaximumSize = new System.Drawing.Size(910, 120);
             this.lblJudul1.Name = "lblJudul1";
-            this.lblJudul1.Size = new System.Drawing.Size(1259, 192);
+            this.lblJudul1.Size = new System.Drawing.Size(840, 120);
             this.lblJudul1.TabIndex = 3;
             this.lblJudul1.Text = "One click onvoice with full accounting setup";
             this.lblJudul1.Click += new System.EventHandler(this.label2_Click);
@@ -383,9 +376,10 @@
             this.lblKategori1.AutoSize = true;
             this.lblKategori1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKategori1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblKategori1.Location = new System.Drawing.Point(55, 63);
+            this.lblKategori1.Location = new System.Drawing.Point(38, 38);
+            this.lblKategori1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKategori1.Name = "lblKategori1";
-            this.lblKategori1.Size = new System.Drawing.Size(116, 32);
+            this.lblKategori1.Size = new System.Drawing.Size(79, 21);
             this.lblKategori1.TabIndex = 2;
             this.lblKategori1.Text = "INVOICES";
             this.lblKategori1.Click += new System.EventHandler(this.label1_Click);
@@ -397,18 +391,20 @@
             this.panel3.Controls.Add(this.lblKonten2);
             this.panel3.Controls.Add(this.lblJudul2);
             this.panel3.Controls.Add(this.lblKategori2);
-            this.panel3.Location = new System.Drawing.Point(475, 646);
+            this.panel3.Location = new System.Drawing.Point(332, 388);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(691, 374);
+            this.panel3.Size = new System.Drawing.Size(484, 224);
             this.panel3.TabIndex = 3;
             // 
             // lblRead2
             // 
             this.lblRead2.AutoSize = true;
             this.lblRead2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblRead2.Location = new System.Drawing.Point(555, 303);
+            this.lblRead2.Location = new System.Drawing.Point(388, 182);
+            this.lblRead2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRead2.Name = "lblRead2";
-            this.lblRead2.Size = new System.Drawing.Size(115, 25);
+            this.lblRead2.Size = new System.Drawing.Size(76, 15);
             this.lblRead2.TabIndex = 7;
             this.lblRead2.Text = "Read More ...";
             this.lblRead2.Click += new System.EventHandler(this.lblRead2_Click);
@@ -417,10 +413,11 @@
             // 
             this.lblKonten2.AutoSize = true;
             this.lblKonten2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKonten2.Location = new System.Drawing.Point(34, 212);
-            this.lblKonten2.MaximumSize = new System.Drawing.Size(650, 100);
+            this.lblKonten2.Location = new System.Drawing.Point(24, 127);
+            this.lblKonten2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKonten2.MaximumSize = new System.Drawing.Size(455, 60);
             this.lblKonten2.Name = "lblKonten2";
-            this.lblKonten2.Size = new System.Drawing.Size(623, 56);
+            this.lblKonten2.Size = new System.Drawing.Size(438, 38);
             this.lblKonten2.TabIndex = 6;
             this.lblKonten2.Text = "Lorem ipsum dol amet, consecte adipisicing elit sed do. some dsu text will be her" +
     "e.";
@@ -429,10 +426,11 @@
             // 
             this.lblJudul2.AutoSize = true;
             this.lblJudul2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul2.Location = new System.Drawing.Point(34, 84);
-            this.lblJudul2.MaximumSize = new System.Drawing.Size(650, 150);
+            this.lblJudul2.Location = new System.Drawing.Point(24, 50);
+            this.lblJudul2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJudul2.MaximumSize = new System.Drawing.Size(455, 90);
             this.lblJudul2.Name = "lblJudul2";
-            this.lblJudul2.Size = new System.Drawing.Size(497, 108);
+            this.lblJudul2.Size = new System.Drawing.Size(333, 74);
             this.lblJudul2.TabIndex = 5;
             this.lblJudul2.Text = "One click onvoice with full accounting setup";
             // 
@@ -441,9 +439,10 @@
             this.lblKategori2.AutoSize = true;
             this.lblKategori2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKategori2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblKategori2.Location = new System.Drawing.Point(34, 38);
+            this.lblKategori2.Location = new System.Drawing.Point(24, 23);
+            this.lblKategori2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKategori2.Name = "lblKategori2";
-            this.lblKategori2.Size = new System.Drawing.Size(97, 28);
+            this.lblKategori2.Size = new System.Drawing.Size(70, 19);
             this.lblKategori2.TabIndex = 3;
             this.lblKategori2.Text = "INVOICES";
             // 
@@ -454,18 +453,20 @@
             this.panel4.Controls.Add(this.lblKonten3);
             this.panel4.Controls.Add(this.lblJudul3);
             this.panel4.Controls.Add(this.lblKategori3);
-            this.panel4.Location = new System.Drawing.Point(1198, 646);
+            this.panel4.Location = new System.Drawing.Point(839, 388);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(691, 374);
+            this.panel4.Size = new System.Drawing.Size(484, 224);
             this.panel4.TabIndex = 7;
             // 
             // lblRead3
             // 
             this.lblRead3.AutoSize = true;
             this.lblRead3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblRead3.Location = new System.Drawing.Point(555, 303);
+            this.lblRead3.Location = new System.Drawing.Point(388, 182);
+            this.lblRead3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRead3.Name = "lblRead3";
-            this.lblRead3.Size = new System.Drawing.Size(115, 25);
+            this.lblRead3.Size = new System.Drawing.Size(76, 15);
             this.lblRead3.TabIndex = 8;
             this.lblRead3.Text = "Read More ...";
             this.lblRead3.Click += new System.EventHandler(this.lblRead3_Click);
@@ -474,10 +475,11 @@
             // 
             this.lblKonten3.AutoSize = true;
             this.lblKonten3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKonten3.Location = new System.Drawing.Point(34, 212);
-            this.lblKonten3.MaximumSize = new System.Drawing.Size(650, 100);
+            this.lblKonten3.Location = new System.Drawing.Point(24, 127);
+            this.lblKonten3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblKonten3.MaximumSize = new System.Drawing.Size(455, 60);
             this.lblKonten3.Name = "lblKonten3";
-            this.lblKonten3.Size = new System.Drawing.Size(623, 56);
+            this.lblKonten3.Size = new System.Drawing.Size(438, 38);
             this.lblKonten3.TabIndex = 6;
             this.lblKonten3.Text = "Lorem ipsum dol amet, consecte adipisicing elit sed do. some dsu text will be her" +
     "e.";
@@ -486,10 +488,11 @@
             // 
             this.lblJudul3.AutoSize = true;
             this.lblJudul3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblJudul3.Location = new System.Drawing.Point(34, 84);
-            this.lblJudul3.MaximumSize = new System.Drawing.Size(650, 150);
+            this.lblJudul3.Location = new System.Drawing.Point(24, 50);
+            this.lblJudul3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJudul3.MaximumSize = new System.Drawing.Size(455, 90);
             this.lblJudul3.Name = "lblJudul3";
-            this.lblJudul3.Size = new System.Drawing.Size(497, 108);
+            this.lblJudul3.Size = new System.Drawing.Size(333, 74);
             this.lblJudul3.TabIndex = 5;
             this.lblJudul3.Text = "One click onvoice with full accounting setup";
             // 
@@ -498,9 +501,10 @@
             this.lblKategori3.AutoSize = true;
             this.lblKategori3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKategori3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.lblKategori3.Location = new System.Drawing.Point(34, 38);
+            this.lblKategori3.Location = new System.Drawing.Point(24, 23);
+            this.lblKategori3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKategori3.Name = "lblKategori3";
-            this.lblKategori3.Size = new System.Drawing.Size(97, 28);
+            this.lblKategori3.Size = new System.Drawing.Size(70, 19);
             this.lblKategori3.TabIndex = 3;
             this.lblKategori3.Text = "INVOICES";
             // 
@@ -509,9 +513,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(1720, 41);
+            this.btnAdd.Location = new System.Drawing.Point(1204, 25);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(169, 47);
+            this.btnAdd.Size = new System.Drawing.Size(118, 28);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add Article";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -522,9 +527,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(68)))));
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(1523, 41);
+            this.btnUpdate.Location = new System.Drawing.Point(1066, 25);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(169, 47);
+            this.btnUpdate.Size = new System.Drawing.Size(118, 28);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update Article";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -532,18 +538,20 @@
             // 
             // ArtikelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.ClientSize = new System.Drawing.Size(959, 449);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pbAfter);
             this.Controls.Add(this.pnl);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ArtikelForm";
             this.Text = "ArtikelForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ArtikelForm_Load);
             this.pnl.ResumeLayout(false);
             this.pnl.PerformLayout();
